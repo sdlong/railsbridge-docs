@@ -1,4 +1,5 @@
 message <<-MARKDOWN
+  這是job board的第一頁！<br>
   We're going to build a job board in Rails using the tried-and-true method of following the errors that we make!
 
   Rails generators will help us avoid some tedious file creation, but provide a lot less magic than scaffolding (which is what is used in the Suggestotron to create *everything* for a Topic all at once).
