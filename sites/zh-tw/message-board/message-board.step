@@ -2,23 +2,35 @@ message <<-MARKDOWN
 ### 中文版
 ## Assumptions made by this curriculum
 ## 假設你已經完成以下課程
+
 * You’ve gone through the standard RailsBridge installfest and have successfully completed the <a href="/installfest/get_a_sticker">Get a Sticker</a> step.
 * You’ve gone through the RailsBridge <a href="/intro-to-rails">Suggestotron curriculum</a> and the  <a href="/job-board">Job Board curriculum</a> at least once before, or maybe a couple of times, or maybe you feel decently comfortable with Rails for some other reason.
 * You want to learn more Rails!!!
 
 ## Goals
+## 目標
 * Make a thing!
+* 做一個東西出來！
 * Understand what the models, views, and controllers of a Rails app do and how they work together.
+* 搞懂Rails專案裡面的 models , views , controllers 在做什麼、如何搭配在一起產生作用。
 * Get more comfortable using error messages as guideposts and not as scary things.
+* 把錯誤訊息當成引導你的一盞明燈，不再恐懼。
 
 ## What’s Going to Happen?
+## 練功目標
 * We’re going to build a message board system, where there are posts on the front page and you click through to see the original post plus discussion below.
+*
 
 * We’ve divided this into challenges:
+* 我們把目標拆開成以下幾個小挑戰
   * Challenge 1: Create a new rails app with a static home page
+  * Challenge 1: 新增一個rails專案，拿來當做靜態網頁
   * Challenge 2: Install Devise
+  * Challenge 2: 安裝 Devise
   * Challenge 3: Make it pretty with Bootstrap
+  * Challenge 3: 使用 Bootstrap 把網頁變漂亮
   * Challenge 4: Add pages to create and look at individual posts
+  * Challenge 4: 
   * Challenge 5: Make a posts index page
   * Challenge 6: Add replying
   * Challenge 7: Inline replying on a post
