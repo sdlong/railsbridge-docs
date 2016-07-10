@@ -1,10 +1,9 @@
 message <<-MARKDOWN
 
-### Goal
+### 目標
 
-Our aim is to get you acquainted with HTML, CSS, and JavaScript, the most essential building blocks
-of web experiences. You'll create a basic static web page about yourself and (optionally) deploy
-it to the web. You'll:
+我們的目標是要讓你熟悉 HTML、CSS 及 JavaScript，這些是構成網路體驗最重要的基礎。
+接下來你會建立一個關於你的基本靜態網頁，並可以部署到網路上。你將會：
 
 * write some content and give it some structure with **HTML**;
 * use **CSS** to adjust the layout and style of that content;
@@ -33,7 +32,7 @@ We're going to be working with:
     * [Sublime Text](http://www.sublimetext.com/) is popular with many Ruby and Rails users. You can use it free for evaluation, then must pay to continue using it.
     * [Atom](https://atom.io/) is a free, open-source editor that can be customized with HTML, CSS, and JavaScript. A download is available for OS X 10.8+, Windows 7/8, and Ubuntu/RedHat linux.
 
-Optional tools if you're deploying to GitHub: 
+Optional tools if you're deploying to GitHub:
 
 * Git;
 * Your [GitHub](http://github.com) account.
