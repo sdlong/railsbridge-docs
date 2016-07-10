@@ -1,4 +1,5 @@
 message <<-MARKDOWN
+### 中文版
 ## Assumptions made by this curriculum
 * You’ve gone through the standard RailsBridge installfest and have successfully completed the <a href="/installfest/get_a_sticker">Get a Sticker</a> step.
 * You’ve gone through the RailsBridge <a href="/intro-to-rails">Suggestotron curriculum</a> and the  <a href="/job-board">Job Board curriculum</a> at least once before, or maybe a couple of times, or maybe you feel decently comfortable with Rails for some other reason.
