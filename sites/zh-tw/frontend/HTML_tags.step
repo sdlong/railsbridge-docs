@@ -10,37 +10,32 @@ overview do
 ## 用標籤來分隔 Blocks of Content
 
 
-每個標籤都帶有它各自的意義。為了將你的內容適當的表現出來，每個東西都應該放到標籤內，not just words you want emphasized. So let's use the paragraph tag `<p>` and the header 1 tag `<h1>`.
+每個標籤都帶有它各自的意義。為了將你的內容適當地表現出來，每個東西都應該放到標籤內，而不是只有你想要強調的部份。我們來用用看段落標籤 `<p>` 及頭標籤1號 `<h1>` 吧。
 
-You'll notice that even if you put in extra lines and spaces, browsers will treat any number of
-new line or space characters like there's just one space there. When you're getting started
-with HTML, this can seem like a pain, because you have to type
+你會注意到就算你放了額外的換行符號及空白，瀏覽器還是會將它們視為單一個空白。當你開始熟悉 HTML 時，這可能會感到痛苦，因為你必須輸入
   MARKDOWN
 
   source_code :html, <<HTML
-<p>first sentence</p>
-<p>second sentence</p>
+<p>第一句</p>
+<p>第二句</p>
 HTML
   message <<-MARKDOWN
 
-when all you want is a blank line between two sentences. But as you get more advanced, this
-aspect of HTML will feel more useful, because it means you can format your code however is
-most readable for **you**, without worrying about what the browser will think of your blank
-lines and spaces.
+才能在兩句話之間加上一個空白。但隨著你經驗的累積，你會覺得 HTML 這項特性其實是很有用的，因為這表示你可以把程式碼改成 **你** 最好讀格式，且不必擔心瀏覽器把你的換行符號及空白解讀成其它意思。
 
 ## 巢狀標籤
 
-It's common for an HTML tag to be nested inside another tag. In the example above, you saw:
+HTML 標籤出現在另一個標籤內是很常見的事。在上面的例子中，你看到：
   MARKDOWN
 
   source_code :html, "<h1><em></em></h1>"
 
   important do
-    message "Just make sure that the tags are correctly _nested_. For example, you can't do:"
+    message "記得確認標籤都有正確的 _擺放_ 。例如你不能："
 
     source_code :html, "<h1><em>Hello World!</h1> I like you!</em>"
 
-    message "The inner tag, `em`, needs to close before the outer tag closes."
+    message "內部標籤 `em` 必須比外部標籤提早關閉。"
   end
 end
 
