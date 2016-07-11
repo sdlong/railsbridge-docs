@@ -16,12 +16,11 @@ message <<-MARKDOWN
 
 ### 時程表
 
-* 1-2 小時的時間來把玩基本的 HTML、CSS 及 Javascript。
+* 1-2 小時來把玩基本的 HTML、CSS 及 Javascript。
 * 约 4 小時的時間來建立我們的網頁。
 * 選用：若你之前曾用過 GitHub 且想要用 Git 及 GitHub 把你的網站放到網路上，我們有這方面的操作說明！（The curriculum has you keeping your site on your machine by default.）
 
-這只是一個粗略的指南， not a mandate.
-Some steps you'll go over and some you'll go under. It'll all work out by the end of the day. :D
+以上這些都是建議，不是強制要求。有些步驟你會順利完成，有些會卡關。反正船到橋頭自然直 XD
 
 ### 要求
 
@@ -30,8 +29,9 @@ Some steps you'll go over and some you'll go under. It'll all work out by the en
 * [Chrome](https://www.google.com/chrome)
   （若你有使用其它瀏覽器開發者模式的經驗，用其它瀏覽器也可以。）
 * 你偏好的程式碼編輯器。
-    * [Sublime Text](http://www.sublimetext.com/) is popular with many Ruby and Rails users. You can use it free for evaluation, then must pay to continue using it.
-    * [Atom](https://atom.io/) is a free, open-source editor that can be customized with HTML, CSS, and JavaScript. A download is available for OS X 10.8+, Windows 7/8, and Ubuntu/RedHat linux.
+    * [Sublime Text](http://www.sublimetext.com/) 受到許多 Ruby 及 Rails 使用者的喜愛。你可以免費用它一陣子，但想繼續用的話必須付費。
+    * [Atom](https://atom.io/) 是一款自由、開源的編輯器，你可以客製化它 HTML、CSS 及 JavaScript 方面的設定。OS X 10.8+、Windows 7/8 及 Ubuntu/RedHat linux 作業系統都可以使用。
+    
 
 如果你要部署到 GitHub，還可以用以下的工具：
 
