@@ -10,7 +10,7 @@ overview do
 ## 用標籤來分隔 Blocks of Content
 
 
-每個標籤都帶有它各自的意義。為了將你的內容適當地表現出來，每個東西都應該放到標籤內，而不是只有你想要強調的部份。我們來用用看段落標籤 `<p>` 及頭標籤1號 `<h1>` 吧。
+每個標籤都帶有它各自的意義。為了將你的內容適當地表現出來，每個東西都應該放到標籤內，而不是只有你想要強調的部份。我們來用用看段落標籤 `<p>` 及1號標頭 `<h1>` 吧。
 
 你會注意到就算你放了額外的換行符號及空白，瀏覽器還是會將它們視為單一個空白。當你開始熟悉 HTML 時，這可能會感到痛苦，因為你必須輸入
   MARKDOWN
@@ -42,7 +42,7 @@ end
 steps do
 
   step do
-    message "Add some more lines of content to your HTML file. Introduce yourself."
+    message "在你的 HTML 檔案多加幾行內容，並介紹你自己。"
 
     source_code :html, <<-HTML
 Hello <em>World</em>!
@@ -50,25 +50,25 @@ Hello <em>World</em>!
 My name is Rachel.
     HTML
 
-    message "Now save the file and refresh your browser."
+    message "把檔案存下來，並重新整理你的瀏覽器。"
     img src: 'img/hello_world_2line.png'
   end
 
   step do
-    message "The browser ignored the new lines and the blank line because we didn't use any tags. Let's use some to break up our content."
-    message "Update your HTML with an `h1` tag and a `p` tag:"
+    message "瀏覽器會忽略換行符號及空白的行，這是因為我們沒有用任何標籤。我們用一些來分開文字內容吧。"
+    message "使用 `h1` 及 `p` 標籤來更新你的 HTML："
 
     source_code :html, <<-HTML
 <h1>Hello <em>World</em>!</h1>
 <p>My name is Rachel.</p>
     HTML
 
-    message "Now save the file and refresh your browser."
+    message "把檔案存下來，並重新整理你的瀏覽器。"
     img src: 'img/hello_world_2line2.png'
   end
 
   step do
-    message "Now let's add a list of things we like."
+    message "現在來加一串我們喜歡的東西吧。"
 
     source_code :html, <<-HTML
 <h1>Hello <em>World</em>!</h1>
@@ -81,7 +81,7 @@ My name is Rachel.
 </ul>
     HTML
 
-    message "Now save the file and refresh your browser."
+    message "把檔案存下來，並重新整理你的瀏覽器。"
     img src: 'img/html_tags_list.png'
   end
 
@@ -94,38 +94,35 @@ explanation do
 
 ## Tags for Every Occasion
 
-The meteoric rise in popularity of the world-wide-web and the recent proliferation of web
-applications has made HTML hugely popular.  While originally used only for simple documents,
-HTML now has tags for embedded video and music playback, embedding images, filling out
+World-wide-web 的竄紅及近來網路應用程式的普及已使得 HTML 大受歡迎。原本 HTML 只是為簡單的文件而設計的，但現在 HTML 有內嵌影片、 HTML now has tags for embedded video and music playback, embedding images, filling out
 web forms, and all kinds of other useful tags.
 
-You just used two well-known tags, `h1` for a headline and `p` for a paragraph. But there
-are a ton of other tags you might use:
+你剛剛只用到兩個很常見的標籤，分別是代表標題的 `h1` 及 代表段落的 `p`。還有其它許多標籤也是你可能會用到的：
 
-## More Tags
+## 更多標籤
 
   MARKDOWN
 
   table border: "1", cellspacing: "0", cellpadding: "3", align: "center" do
     tr {
-      th "Tag"
-      th "Purpose"
+      th "標籤"
+      th "用意"
     }
     tr {
       td "a"
-      td "A link (the 'a' stands for Anchor)."
+      td "連結（a 表示 Anchor （錨））"
     }
     tr {
       td "h1 to h6"
-      td "Various headers, h1 is the most important, h6 the least."
+      td "各種標頭，h1 是最重要的，h6 則是最不重要的。"
     }
     tr {
       td "ul"
-      td "Start a bulleted list (an 'unordered list')."
+      td "Start a bulleted list (無序號列表)."
     }
     tr {
       td "ol"
-      td "Start a numbered list (an 'ordered list')."
+      td "Start a numbered list (有序號列表)."
     }
     tr {
       td "li"
@@ -137,11 +134,11 @@ are a ton of other tags you might use:
     }
     tr {
       td "form"
-      td "A form that can collect data from user input."
+      td "讓使用者輸入資料的表格。"
     }
     tr {
       td "input"
-      td "A text input, a button, or a checkbox in a form."
+      td "form 裡面的文字輸入欄、按鈕或是勾選框。"
     }
     tr {
       td "div"
@@ -155,34 +152,34 @@ are a ton of other tags you might use:
 
   message <<-MARKDOWN
 
-  HTML5 introduced lots of new tags to make the HTML more *semantic*, meaning the tags should describe the content they describe. Some of the new elements introduced by HTML5 include:
+  HTML5 引入許多新的標籤來讓 HTML 更具 *語議* ，這表示標籤可以描述它們想要描述的內容。部份 HTML5 引入的標籤包含：
 
   MARKDOWN
 
   table border: "1", cellspacing: "0", cellpadding: "3", align: "center" do
     tr {
-      th "Tag"
-      th "Purpose"
+      th "標籤"
+      th "用意"
     }
     tr {
       td "section"
-      td "A section of a document: a thematic grouping of content."
+      td "文件的一個區段：A section of a document: a thematic grouping of content."
     }
     tr {
       td "nav"
-      td "A navigation section, containing links to other pages or to parts within the current page."
+      td "導覽區段，包含指向其它頁面或本頁其它部份的連結。"
     }
     tr {
       td "header"
-      td "The header for a page or section of a page. (This is different from the head element, which contains metadata about the page!)."
+      td "頁面的標頭或區段。（這跟 head 元件不同，head 還包含頁面的中繼資料！）。"
     }
     tr {
       td "footer"
-      td "The footer for a page or section of a page."
+      td "頁面的頁尾或區段。"
     }
     tr {
       td "main"
-      td "The main content of a page."
+      td "一個頁面的主要內容。"
     }
     tr{
       td "aside"
@@ -192,19 +189,19 @@ are a ton of other tags you might use:
 
   message <<-MARKDOWN
 
-You don't need to memorize all the tags! You can always look them up on sites like:
+你不必把全部標籤背下來，需要用的時候再到下面網站找就可以了：
 
 * [WebPlatform.org](http://webplatform.org/)
 * [Mozilla Developer Network](https://developer.mozilla.org/en/HTML/Element)
 * [Sitepoint](http://reference.sitepoint.com/html)
 
-## Try This
+## 試試看
 
-What happens if you change the `<ul>` in your **hello.html** to `<ol>`? (Don't forget to change the closing tag, too.)
+如果你把 **hello.html** 內的 `<ul>` 換成 `<ol>` 會發生什麼事？（別忘了結尾標籤但也要跟著改。）
 
-Can you link your favorite things to their Wikipedia pages? Here's an example link for you: `<a href="http://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a>`
+你有辦法把你最喜歡的東西連結到它們的維基頁面嗎？這裡有個連結的範例：`<a href="http://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a>`
 
-What are all the individual parts of the code to add a link?
+想想看，添加連結的程式碼每個部份代表什麼意思？
 
   MARKDOWN
 
