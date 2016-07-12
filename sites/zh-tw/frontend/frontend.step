@@ -7,18 +7,18 @@ message <<-MARKDOWN
 
 * 寫些內容，並用 **HTML** 給它一些架構；
 * 用 **CSS** 來調整內容的版面及風格；
-* 用 use **JavaScript** 來加入互動性的元件；
+* 用 **JavaScript** 來加入互動性的元件；
 * 選用：用 **git** 是把你的網站推到 Github。
 
-下面是你網頁可能的模樣的範本：
+你的網頁可能長得像這樣：
 
 ![screenshot](img/page_sample.jpg)
 
-### 時程表
+### 行程
 
 * 1-2 小時來把玩基本的 HTML、CSS 及 Javascript。
 * 约 4 小時的時間來建立我們的網頁。
-* 選用：若你之前曾用過 GitHub 且想要用 Git 及 GitHub 把你的網站放到網路上，我們有這方面的操作說明！（The curriculum has you keeping your site on your machine by default.）
+* 選用：若你之前曾用過 GitHub 且想要用 Git 及 GitHub 把你的網站放到網路上，我們有這方面的操作說明！（課程預設會把你的網站架在你的電腦上。）
 
 以上這些都是建議，不是強制要求。有些步驟你會順利完成，有些會卡關。反正船到橋頭自然直 XD
 
@@ -27,13 +27,13 @@ message <<-MARKDOWN
 我們將會使用以下的工具來操作：
 
 * [Chrome](https://www.google.com/chrome)
-  （若你有使用其它瀏覽器開發者模式的經驗，用其它瀏覽器也可以。）
+  （若你有使用其它瀏覽器開發者模式的經驗，用其它瀏覽器也可以。）；
 * 你偏好的程式碼編輯器。
-    * [Sublime Text](http://www.sublimetext.com/) 受到許多 Ruby 及 Rails 使用者的喜愛。你可以免費用它一陣子，但想繼續用的話必須付費。
-    * [Atom](https://atom.io/) 是一款自由、開源的編輯器，你可以客製化它 HTML、CSS 及 JavaScript 方面的設定。OS X 10.8+、Windows 7/8 及 Ubuntu/RedHat linux 作業系統都可以使用。
-    
+    * [Sublime Text](http://www.sublimetext.com/) 受到許多 Ruby 及 Rails 使用者的喜愛。你可以基於想評估而免費用它，但想繼續用的話必須付費。
+    * [Atom](https://atom.io/) 是一款自由、開源的編輯器，你可以客製化它 HTML、CSS 及 JavaScript 方面的設定。OS X 10.8+、Windows 7/8 及 Ubuntu/RedHat linux 作業系統都有可用的下載。
 
-如果你要部署到 GitHub，還可以用以下的工具：
+
+如果你要部署到 GitHub，可以用以下的工具：
 
 * Git;
 * 你的 [GitHub](http://github.com) 帳號.
