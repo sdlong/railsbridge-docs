@@ -24,7 +24,7 @@ message <<-MARKDOWN
 
 ### 要求
 
-我們將會使用以下的工具來操作：
+我們將會使用以下工具來操作：
 
 * [Chrome](https://www.google.com/chrome)
   （若你有使用其它瀏覽器開發者模式的經驗，用其它瀏覽器也可以。）；
@@ -35,8 +35,8 @@ message <<-MARKDOWN
 
 如果你要部署到 GitHub，可以用以下的工具：
 
-* Git;
-* 你的 [GitHub](http://github.com) 帳號.
+* Git
+* 你的 [GitHub](http://github.com) 帳號
 MARKDOWN
 
 insert 'working_effectively_and_efficiently'
