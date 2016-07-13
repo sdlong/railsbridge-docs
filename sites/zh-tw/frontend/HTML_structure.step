@@ -8,12 +8,12 @@ overview do
 
   message <<-MARKDOWN
 
-## The HTML tag and DOCTYPE
+## HTML 標籤 及 DOCTYPE
 
 `<!DOCTYPE html>` 被稱為 doctype，它告訴瀏覽器你正在用哪種 HTML。
 `<!DOCTYPE html>` 會通知瀏覽器你正在用最新版的 HTML5。
 
-（你可能會看到舊式的 doctype，它們看起來比較長且複雜許多，這是因為當時人們用了各種版本的 HTML 及 XHTML 。通常新網站用這個簡短版本的 HTML 就行了）
+（你可能會看到舊式的 doctype，它們看起來比較長且複雜許多，這是因為當時人們用了各種版本的 HTML 及 XHTML 。通常新網站用這個簡短版本就行了）
 
 `<html>` 標籤會包住你的頁面並表明「這是我的 HTML！」
 
@@ -24,10 +24,10 @@ overview do
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Important invisible details will go here! -->
+    <!-- 重要的不可見細節資訊會放這裡！ -->
   </head>
   <body>
-    Visible Content
+    可見內容
   </body>
 </html>
 HTML
@@ -35,7 +35,7 @@ HTML
 
 ### 頭（head）
 
-`head` 包含你瀏覽器不會顯示的資訊。它有中繼資料（有關資料的資料）的標籤，可以告訴搜尋引擎或其它程式更多關於這份檔案的資訊，例如誰建立這個檔案或是哪些關鍵字跟這個檔案比較有關，像是：
+`head` 包含你瀏覽器不會顯示的資訊。它有中繼資料（有關資料的資料）的標籤，可以告訴搜尋引擎或其它程式更多關於這份檔案的資訊，例如誰建立這個檔案或是哪些關鍵字跟這個檔案有關，像是：
 
  * 你用哪種語言或字元集：`<meta charset="utf-8">`
  * 這個頁面的標題是什麼: `<title>HTML!</title>`
@@ -87,7 +87,7 @@ steps do
 
 <img src='img/hello_title.png'>
 
-（如果它沒有顯示出來，確認一下你是否有把這段字加到開頭及結尾的 head 標籤裡面，並確認你在重新整理前有存檔。）
+（如果它沒有顯示出來，確認一下你是否有把這段字加到開頭及結尾的 head 標籤當中，並確認你在重新整理前有存檔。）
     MARKDOWN
   end
 
