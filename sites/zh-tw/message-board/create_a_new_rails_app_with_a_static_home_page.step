@@ -1,34 +1,45 @@
 requirements do
 message <<-MARKDOWN
-* You should have a new rails app with with a static home page that's under your control. Make sure the controller for this page is called **HomeController**.
-* You, the developer, should explain to a teacher, TA, or fellow student how Rails knows to render the home view.
+
+* 你應該要有一個靜態首頁。確認這個首頁的 controller 叫做 **HomeController**.
+* 向老師或是同學解釋，Rails 透過哪些步驟來呈現 Home 這個 view。
 MARKDOWN
   img class: 'noborder', src: 'img/static_home_page.png'
 end
 
 discussion do
 message <<-MARKDOWN
-* In order to have a static home page, you will need a route, a controller, a view. Discuss!
-  * Seriously. If you don't discuss this stuff, things will be SO much harder.
-* Generators! Rails has lots of them. Try exploring the output of `rails generate`.
-* We’re not using `rails generate scaffold` in this curriculum. Because you will generate all your Models, Views and Controllers yourself, this will force you, to do more understanding-building brain work. The teacher/TAs can perhaps comment on what they would do in the real world and their thoughts on the excellence of this choice for learning-purposes.
-* What do you need to add to your home controller (after you've made it) to have a static home page?
-* How does the home/index.html.erb view file relate to the layouts/application.html.erb view file?
-* What’s the significance of yield in the application view?
-* What does the home controller do?
+
+* 為了擁有一個靜態首頁，你需要有一個 route,一個 controller,一個 view。 互相討論一下。
+  * 說真的，如果你不討論這些東西，事情會變得比你想像中更困難！
+
+
+* Generators! 試著解釋 `rails generate` 會輸出什麼檔案。
+
+* 本課程我們不用 `rails generate scaffold` 。你要自己做出 Models, Views Controllers ； 這樣才會加強複習你之前學過的基礎。
+老師們也許可以對於「自己會怎麼做、覺得什麼是卓越選項」，做些評論來增加學習動機。
+
+* 為了有個靜態首頁，你需要增加什麼到你的 home controller (在建立它之後)？
+
+* home/index.html.erb 檔案 跟 layouts/application.html.erb 檔案有什麼關連？
+
+* yield 在 view 的意義是什麼？
+
+* home controller 在做什麼？
 MARKDOWN
 end
 
 tools_and_references do
 message <<-MARKDOWN
-* RailsGuides - Setting the Application Home Page: <http://guides.rubyonrails.org/getting_started.html#setting-the-application-home-page>.
-* RailsGuides - controllers overview: <http://guides.rubyonrails.org/action_controller_overview.html>.
+* RailsGuides - 設置應用程式首頁： <http://rails.ruby.tw/getting_started.html#設置應用程式首頁>
+* RailsGuides - Action Controller 概覽： <http://rails.ruby.tw/action_controller_overview.html>
 MARKDOWN
 end
 
 hints do
 message <<-MARKDOWN
-* If you have no idea what to put in your home controller, maybe try looking back at a past-Railsbridge app? Or another rails app you have lying about?
+
+* 如果不知道怎麼設置你的 home controller，也許可以回頭找找之前的 Railsbridge 專案。
 MARKDOWN
 end
 
