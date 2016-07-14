@@ -13,17 +13,12 @@ HTML 代表 __H__yper-__t__ext __M__arkup __L__anguage.
 
 讓我們從最後一個詞開始解釋每個字的意思吧。
 
-* __L__anguage - 人類會用不同的語言來溝通。我們會用像是英文或中文的語言來進行人類之間的溝通，People use different languages for different types of communication.
-  We use languages such as English or Mandarin for human communication or languages such as
-  Ruby or JavaScript to give instructions to computers.  HTML is a special language for describing documents.
+* __L__anguage - 人類會用不同的語言來做各種類型的溝通。例如我們會用中文或英文和其他人溝通，或是用 Ruby、Javascript 對電腦下指令。HTML 是專門用來描述文件的語言。
 
-* __M__arkup - Being a *markup* language means that HTML is mixed in with plain content text.
-  Think of a time when you turned in an essay to your teacher.  Your teacher reads your essay
-  and *marks* it *up* with comments or suggestions, adding extra information on top of the plain text
-  content.
+* __M__arkup - *標記*（markup）語言代表 HTML 會混搭純文字內容。想想你交報告給老師時，老師會檢視你的報告，
+  並在上面加上評語或建議，這其實就相當於在純文字內容加上標記。
 
-- __H__yper-__t__ext - This term comes from the fact that early computers could only work with plain text
-  files.  Computer users as early as the 1960s wanted to enrich this text and make it easier to work with.
+- __H__yper-__t__ext - 這個詞源自於早期電腦只有純文本模式。1960 年代的電腦使用者希望能擴充這些文本，並讓文本更容易使用。
   Thus, hypertext was born.  It is text because the file is stored as plain text, yet hyper because the text
   has a special meaning beyond the plain text when interpreted by a special program.  For HTML, that special
   program is your web browser (like Chrome).
@@ -37,35 +32,35 @@ steps do
 
   step do
     message <<MARKDOWN
-You'll need to fire up your text editor (like Sublime Text or Atom) for these steps. We're going to make an HTML document!
+你需要開啟你的文字編輯器（像是 Sublime Text 或 Atom）來進行這些步驟。我們準備要建立一份 HTML 文件！
 
-Make a new file and call it <b>hello.html</b>. (In some editors, you may need to set the file type to 'HTML'; but usually, just using the .html extension will be enough.)
+建立一個新的檔案並把它命名為 <b>hello.html</b> 。（在某些編輯器當中，你可能需要把檔案類型設定成 HTML，但通常把副檔名設為 .html 就可以了。）
 
 <img src='img/hello_html.png' alt="text editor with empty file named hello.html">
 
-Notice the extension .html.  It indicates to the browser that it should render this content as HTML.
+注意 .html 這個副檔名。它告訴瀏覽器內容要以 HTML 方式呈現。
 
-Type this within the HTML document you just created:
+在你剛剛建立的 HTML 文件輸入這串字：
 MARKDOWN
 
     source_code "Hello World!"
-    message "Save the file some place you'll be able to find easily, like your Desktop."
+    message "把這份檔案存到很容易找到的位置，像是你的桌面。"
   end
 
   step do
     message <<MARKDOWN
-Open Chrome and go to File, Open File, then select the file from your Desktop or wherever you put it.
+打開 Chrome ，並依序來到 檔案、開啟檔案，然後再從桌面或是任何之前你存放的地方選擇檔案。
 
 <img src='img/hello_world.png' alt="hello.html file rendered in browser displaying: Hello World">
 
-Even though your file does not include any HTML tags yet, browsers are great at showing text on screen, so your browser will just show you your text.
+即使你的檔案還沒有包含任何 HTML 標籤，瀏覽器還是會直接顯示你的文字。
 MARKDOWN
   end
 
   step do
-    message "Kind of boring, right? To make it look a little less plain, let's drop in an HTML tag. Update the contents of your hello.html file to look like this:"
+    message "有點無聊，對吧？為了讓它看起來比較厲害，我們來放一個 HTML 標籤吧。把你的 hello.html 內容改成像這樣："
     source_code :html, "Hello <em>World</em>!"
-    message "The `em` HTML tag tells your browser to add <em>em</em>phasis to that string of text. Refresh your browser and you'll see the effect:"
+    message " HTML 的 `em` 標籤會告訴你的瀏覽器在那段文字上畫重點（<em>em</em>phasis）。重新整理你的瀏覽器就會看到效果："
     message "<img src='img/hello_world_jazzy.png' alt='hello.html file rendered in browser displaying: Hello World with world emphasized'>"
   end
 
@@ -73,7 +68,7 @@ message <<-MARKDOWN
 
 ## HTML is Tags
 
-The browser needs more information than just the file extension to display your website's content. The way we provide that information is by *marking up* your text with content clues in the form of HTML tags. Which you just did, by adding the `<em>` tag to your page!
+瀏覽器需要的不只是副檔名來呈現你的網站的內容。 The way we provide that information is by *marking up* your text with content clues in the form of HTML tags. Which you just did, by adding the `<em>` tag to your page!
 
 An HTML tag is encased within angle brackets, which look like this: `<`, `>`. Most tags have a matching closing tag with a forward slash. The tags describe the content they surround, in our example, emphasizing the word "world".
 
