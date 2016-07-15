@@ -1,29 +1,30 @@
 message <<-MARKDOWN
-  這是job board的第一頁！<br>
-  We're going to build a job board in Rails using the tried-and-true method of following the errors that we make!
+  我們要建立一個Rails求職看板，是使用我們嘗試錯誤之後得出的可靠方法來實作!
 
-  Rails generators will help us avoid some tedious file creation, but provide a lot less magic than scaffolding (which is what is used in the Suggestotron to create *everything* for a Topic all at once).
 
-  This means we'll a get a little less done today than we did when we built Suggestotron. But we're going to build an app in little pieces, so you can focus on understanding how the pieces fit together.
+  Rails generators 可以幫助我們避免一些乏味的檔案建置，但不像scaffolding那麼神奇。 (上次在Suggestotron把關於Topic的*所有東西* 全部一次建置好).
+
+  這意味著與我們在建立Suggestotron時相比今天我們會獲得比較少。但我們仍會構建一小部分的應用程式，你可以專注在了解這些部分是如何組合在一起的。
+
 MARKDOWN
 
-tip "This is not a self-paced curriculum. You should use the discussion sections on each page to make sure everyone is together!"
+tip "這不是一個自學課程。你應該使用每個頁面上的討論段落並確保他們可以組合在一起!"
 
 message <<-MARKDOWN
-  # Notable Things
+  # 值得注意的事項
 
-  As you might have noticed, we're assuming you've already been to a RailsBridge workshop before or have otherwise already explored a Rails app, and are ready for deeper knowledge.
+  你可能已經注意到，我們假設你已經去過RailsBridge workshop或透過其他管道探索過Rails app，以及準備好接受更深的知識。
 
-  We're also going to skip deploying to Heroku this time around, but you can definitely use the instructions from the Suggestotron curriculum to deploy your app to the internet!
+  我們也將跳過部署到Heroku這個部分，但你絕對可以在初探rails的課程中使用該指令，把你的app 部署到網路上。
 MARKDOWN
 
-important "This curriculum is written for Rails 5. Things will get awkward / broken if you're using an earlier version of Rails, so if you skipped the Installfest, you need to upgrade to Rails 5 now."
+important "此課程使用Rails 4。如果你使用Rails 3 事情變得難以處理或壞掉了、如果你也略過了Installfest，現在你需要升級到Rails 4了。"
 
 message <<-MARKDOWN
-  # Tips for everyone:
+  # 給大家的提示:
 
-  * When adding code, it's awesome for students to walk through the code line by line and say out loud what is happening. (i.e., "The string is being stored in the instance variable" or "The method `snorgle` is being defined"). If you do it every time, you'll get really comfortable with the vocabulary of Rails!
-  * Error messages are your friend! Read them carefully, and practice understanding what Rails is telling you. Seeing an error and just diving back into your code is a natural reaction, but stop! Then read, think, and talk about what the error means before fixing it.
+  * 當添加程式碼時讓新手逐行說出每一行程式發生了什麼事是很棒的做法。（例如，“這個字串是在儲存該實體變數”或“這個叫snorgle的method被定義了”）。如果你每次都這樣做，你會覺得看Rails的代碼是輕鬆愉悅的!
+  * 錯誤訊息是你的朋友！仔細地閱讀，以及練習去理解Rails在告訴你什麼。看到錯誤訊息然後馬上回去看你的程式碼是一個自然反應，但是停下來！稍待片刻，在修復錯誤之前，先閱讀、思考以及說說錯誤訊息代表的意思。
 MARKDOWN
 
 insert '../intro-to-rails/working_effectively_and_efficiently'
