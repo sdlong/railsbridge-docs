@@ -1,6 +1,6 @@
 goals do
   goal "建立一個空白的 HTML 檔案"
-  goal "觀察這份檔案是怎麼被網頁瀏覽器解析的"
+  goal "觀察這份檔案怎麼被網頁瀏覽器解析"
 end
 
 overview do
@@ -11,17 +11,14 @@ overview do
 
 HTML 代表 __H__yper-__t__ext __M__arkup __L__anguage.
 
-讓我們從最後一個詞開始解釋每個字的意思吧。
+讓我們從最後一個字開始解釋意思吧。
 
 * __L__anguage - 人類會用不同的語言來做各種類型的溝通。例如我們會用中文或英文和其他人溝通，或是用 Ruby、Javascript 對電腦下指令。HTML 是專門用來描述文件的語言。
 
-* __M__arkup - *標記*（markup）語言代表 HTML 會混搭純文字內容。想想你交報告給老師時，老師會檢視你的報告，
-  並在上面加上評語或建議，這其實就相當於在純文字內容加上標記。
+* __M__arkup - *標記*（markup）語言代表 HTML 會混搭純文字內容。回想你交報告給老師時，老師會檢視你的報告，並在上面加上評語或建議，這其實就相當於在純文字內容加上標記。
 
-- __H__yper-__t__ext - 這個詞源自於早期電腦只有純文本模式。1960 年代的電腦使用者希望能擴充這些文本，並讓文本更容易使用。
-  Thus, hypertext was born.  It is text because the file is stored as plain text, yet hyper because the text
-  has a special meaning beyond the plain text when interpreted by a special program.  For HTML, that special
-  program is your web browser (like Chrome).
+- __H__yper-__t__ext - 這個詞源自於早期電腦只能處理純文本資料。1960 年代的電腦使用者希望能擴充這種文本，並讓它更容易使用。因此超文本就誕生了。
+由於檔案以純文本的方式儲存，所以它是「文本」，再加上使用特定程式解析時，這些文字有純文本以外的意思，所以被稱為「超」。以 HTML 來說，特定程式就是指你的瀏覽器（例如 Chrome）。
   MARKDOWN
 
 
@@ -36,7 +33,7 @@ steps do
 
 建立一個新的檔案並把它命名為 <b>hello.html</b> 。（在某些編輯器當中，你可能需要把檔案類型設定成 HTML，但通常把副檔名設為 .html 就可以了。）
 
-<img src='img/hello_html.png' alt="text editor with empty file named hello.html">
+<img src='img/hello_html.png' alt="用文字編輯開啟，名為 hello.html 的空白檔案。">
 
 注意 .html 這個副檔名。它告訴瀏覽器內容要以 HTML 方式呈現。
 
@@ -44,16 +41,16 @@ steps do
 MARKDOWN
 
     source_code "Hello World!"
-    message "把這份檔案存到很容易找到的位置，像是你的桌面。"
+    message "把這份檔案存到你很容易找到的地方，像是你的桌面。"
   end
 
   step do
     message <<MARKDOWN
-打開 Chrome ，並依序來到 檔案、開啟檔案，然後再從桌面或是任何之前你存放的地方選擇檔案。
+打開 Chrome ，並依序點擊 檔案、開啟檔案，然後再從桌面或是任何之前你存放的地方選擇檔案。
 
-<img src='img/hello_world.png' alt="hello.html file rendered in browser displaying: Hello World">
+<img src='img/hello_world.png' alt="瀏覽器呈現 hello.html 檔案內容：Hello World">
 
-即使你的檔案還沒有包含任何 HTML 標籤，瀏覽器還是會直接顯示你的文字。
+即使你的檔案還沒有包含任何 HTML 標籤，由於瀏覽器很善於顯示文字，所以它還是會直接顯示你的文字。
 MARKDOWN
   end
 
@@ -61,24 +58,25 @@ MARKDOWN
     message "有點無聊，對吧？為了讓它看起來比較厲害，我們來放一個 HTML 標籤吧。把你的 hello.html 內容改成像這樣："
     source_code :html, "Hello <em>World</em>!"
     message " HTML 的 `em` 標籤會告訴你的瀏覽器在那段文字上畫重點（<em>em</em>phasis）。重新整理你的瀏覽器就會看到效果："
-    message "<img src='img/hello_world_jazzy.png' alt='hello.html file rendered in browser displaying: Hello World with world emphasized'>"
+    message "<img src='img/hello_world_jazzy.png' alt='hello.html 檔在瀏覽器呈現出來，並顯示 Hello World，其中 World 被強調。'>"
   end
 
 message <<-MARKDOWN
 
-## HTML is Tags
+## HTML 就是標籤
 
-瀏覽器需要的不只是副檔名來呈現你的網站的內容。 The way we provide that information is by *marking up* your text with content clues in the form of HTML tags. Which you just did, by adding the `<em>` tag to your page!
+除了副檔名，瀏覽器還需要其它資訊才能呈現你的網站內容。我們透過在你的純文本內容加上 HTML 標籤來提供這些資訊。例如剛剛你就在你的頁面加上 `<em>`！
 
-An HTML tag is encased within angle brackets, which look like this: `<`, `>`. Most tags have a matching closing tag with a forward slash. The tags describe the content they surround, in our example, emphasizing the word "world".
 
-__Opening tag__: `<em>`
+HTML 標籤會被包在在尖括號（長的像 `<`、`>`）內。大部份標籤都會和一個帶斜線的結束標籤匹配。標籤描述它們包住的內容，例如我們範例中的標籤強調「world」這個字。
 
-__Content__: `world`
+__起始標籤__：`<em>`
 
-__Closing tag__: `</em>`
+__內容__：`world`
 
-And all these things combined&mdash;opening tag, content, and closing tag&mdash;are called an HTML __element__: `<em>World</em>`
+__結束標籤__：`</em>`
+
+當起始標籤、內容、結束標籤組合在一起時，我們稱它為 HTML 元件：`<em>World</em>`
 
 MARKDOWN
 
