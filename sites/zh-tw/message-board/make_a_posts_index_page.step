@@ -1,23 +1,28 @@
 requirements do
 message <<-MARKDOWN
-* The user should be able to see each post’s name, author, and date published on the overview page (aka the index page).
-* The name of the post should link to the post show page.
-* The index page should include a “New Post” link or button.
+
+* 使用者應該能在 index 頁面上看到每篇文章的標題、作者、文章發佈日期。
+
+* 每篇文章的標題，應該可以點擊，然後連結到個別文章的頁面（show page）。
+
+* 這個 index 頁面應該包含一個「新增文章（New Post）」的按鈕（或連結）。
 MARKDOWN
   img class: 'noborder', src: 'img/post_index.png'
 end
 
 discussion do
 message <<-MARKDOWN
-* Maybe now would be a good time to discuss Active Record! Can anyone explain it? 
+
+* 也許現在是討論 Active Record 的好時機了！有誰想要解釋一下嗎？
 MARKDOWN
 end
 
 tools_and_references do
 message <<-MARKDOWN
-* RailsGuides - Listing All Posts: http://guides.rubyonrails.org/v4.0/getting_started.html#listing-all-posts
-  * Feel free to disregard the JSON stuff on this page, if you're so inclined.
-* Bootstrap - Style that table! http://getbootstrap.com/css/#tables
+
+* RailsGuides - [顯示所有文章](http://rails.ruby.tw/getting_started.html#顯示所有文章)
+
+* Bootstrap - 把表單換裝 http://getbootstrap.com/css/#tables
 MARKDOWN
 end
 
