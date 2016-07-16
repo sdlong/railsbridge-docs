@@ -1,58 +1,43 @@
 goals do
-  goal "Learn basic CSS syntax"
-  goal "Write some basic CSS styles"
+  goal "學習基本 CSS 語法"
+  goal "寫些基本的 CSS 樣式"
 end
 
 overview do
   message <<-MARKDOWN
-## What is CSS?
+## 什麼是 CSS ？
 
-CSS stands for *C*ascading *S*tyle*s*heets. It's a language for creating **rules** that
-can **select** various elements on the page and change their **visual properties**.
+CSS 代表 *C*ascading *S*tyle*s*heets。它可以用來產生**選擇**各種頁面元件並改變它們**視覺屬性**的**規則**。
 
-* *C*ascading - this is how the browser determines the correct style rules to apply to
-  each element on the page. As we'll see, CSS has many ways to match rules to elements, and
-  some of those ways count for more than others. The browser allows more important rules to
-  _cascade_ over less important ones.
+* *C*ascading - 這是瀏覽器決定如何把正確樣式規則套在頁面上每個元件的方式。我們接下來會看到，CSS 有許多方式來把規則配對到元件上，其中某些方式的權重大於其它方式。瀏覽器允許權重大的規則蓋過權重小的規則。
 
-* *S*tyle*s*heets - CSS files are called 'stylesheets' because they are separate documents - their
-  file type is .css - that only deal with styling information. We add special tags in our HTML files to
-  link them to our stylesheets.
+* *S*tyle*s*heets - 由於 CSS 檔案是分開且只處理樣式訊息的文件，所以它們被稱為「樣式表」（stylesheets）。它們的副檔名是 .css。我們會在 HTML 檔案裡加上特殊標籤來將 HTML 檔連結到我們的樣式表。
 
-Unlike HTML, which is concerned with the _meaning_ of the content, CSS is **presentational**:
-it's concerned with how that content should look.
-
+HTML 跟內容的含義有關，CSS 跟 HTML 不同的地方在於它跟內容怎麼呈現有關。
 
 MARKDOWN
 
   tip do
-    message "## Why are HTML and CSS separate?"
+    message "## 為什麼 HTML 跟 CSS 要分開？"
     message <<-MARKDOWN
-There are many good reasons to keep HTML and CSS separate. A typical website will reuse styles
-- like the color of links or the sizes of buttons - over and over again; by keeping them separate from the markup, we can
-use the same styles across a site.
+把 HTML 跟 CSS 分開有許多好處。 網站通常會重複使用樣式 - 例如連結的顏色或按鈕的大小。透過將 CSS 及標記分開，我們可以在整個網站裡用相同的樣式。
 
-This makes our code more efficient and easier to maintain, and keeps the site visually consistent. It also makes it easier to use
-different styles for different devices, so a site can have different looks for different browsers.
+這可以使我們的程式碼維護起來更容易且更有效率，同時網站在視覺上有一致性。這也可以讓我們更容易在不同的設備上套用不同的樣式，所以一個網站在不同的瀏覽器上可以有不同的樣貌。
 MARKDOWN
   end
 
   message <<-MARKDOWN
-## CSS Rules Are Made of a Selector and Attributes
+## CSS 規則是由一個選擇器及多個屬性組成的
 
-The **selector** is the first part of a CSS rule - it tells the browser how to find, or *select*, the element we want to style.
-On this page, we'll use `h1` and `p` as our selectors, which match the `h1` and `p` elements in our HTML.
+**選擇器**是 CSS 的第一個部份 - 它告訴瀏覽器怎麼找或*選*出我們想要改變樣式的元件。在這一頁，我們將會用 `h1` 及 `p` 當作我們的選擇器，它會跟 HTML 的 `h1` 及 `p`配對到。
 
 <img src='img/css.png'>
 
-The **attributes** are the parts of the rule inside the curly braces - they tell the browser how the elements
-we've selected should appear.
+**特徵**（attributes）是大括號內規則的一部份 - 它們會告訴瀏覽器我們選擇的元件該如何呈現。
 
-Take a look at the attributes for the `h1` rule above. The part before the colon &mdash; `font-size` &mdash; is the **property**,
-and the part after it &mdash; `20px` &mdash; is the **value**. This attribute tells the browser that all `h1` elements
-should have a `font-size` of 20 pixels.
+看一看上面 `h1` 規則的特徵。冒號前面的部份 &mdash; `font-size` &mdash; 是**屬性**，冒號後面的部份 &mdash; `20px` &mdash; 則是**值**。這項特徵告訴瀏覽器所有 `h1` 元件的 `font-size` 都必須是 20 像素。
 
-The semicolons at the end of each attribute are important - if we forget them, the CSS won't work.
+特徵最後的分號非常重要，忘記加的話，CSS 就不會正常運作。
 
 
 MARKDOWN
@@ -61,8 +46,8 @@ end
 steps do
 
   step do
-    message "Initially, we're going to add our CSS inside the `<head>` tag, below the line with the page title."
-    message "A standard style tag might look like this:"
+    message "首先我們要把 CSS 加到 `<head>` 標籤裡，也就是頁面標題的下一行。"
+    message "一個標準的 tag 看起來可能這樣："
     source_code :html, <<HTML
 <head>
 <title>My Sample HTML page</title>
@@ -71,11 +56,11 @@ steps do
 </style>
 </head>
 HTML
-    message "Now save the file and refresh your browser. Everything should look the same."
+    message "存檔並重新整理你的瀏覽器。一切看起來應該都沒變化。"
   end
 
   step do
-    message "Add some styles that will apply to your `h1` and `p` tags."
+    message "在你的 `h1` 及 `p` 標籤加些樣式。"
     source_code :html, <<HTML
 <style type="text/css" media="screen">
 h1 {
@@ -90,13 +75,13 @@ p {
 </style>
 HTML
     message <<-MARKDOWN
-When you save and refresh your browser, you should see the styles you added:
+存檔並重新整理你的瀏覽器後，你應該會看到剛剛加上的樣式：
 
 <img src='img/hello_style.png'>
 
-The `type` and `media` attributes inside of the `<style>` tag give the browser more context for how to deal with the included information. In this case, we're telling it that the type is CSS, and that it's being displayed on a screen (as opposed to `media=\"print\"`, which is usually specially styled so it looks reasonable when printed). In HTML5, these are optional, so we could leave them out if we wanted to.
+`<style>` 標籤內的 `type` 及 `media` 特徵可以讓瀏覽器更清楚怎麼處理這些訊息。在這個例子中，我們告訴瀏覽器類型是 CSS 且會在螢幕上顯示（另一種是 `media=\"print\"`，這種寫法可以讓印出來的樣式更合理）。在 HTML5 裡，這些都是選用的，所以不想用的話也可以不加。
 
-To visualize the relations between elements of **Content**, **Padding**, **Border**, and **Margin**, otherwise known as the CSS Box Model, here is an example of how this fits in:
+為了讓 **Content**、**Padding**、**Border** 及 **Margin** （這 4 個被合稱為 CSS 盒模型）元件間的關係可以視覺化，這裡有張示意圖：
 
 <img src='img/boxmodel.png'>
 
@@ -110,11 +95,11 @@ explanation do
 
   message <<-MARKDOWN
 
-## CSS is super powerful
+## CSS 真是太強啦
 
-Here are two screen shots of the same HTML page. On the left is just the HTML. On the right side, we've added lots of CSS. Almost all of the color and formatting are applied using CSS, and the code snippets and buttons now look great.
+底下是兩張相同 HTML 頁面的截圖。左邊只有 HTML。右邊則加入很多 CSS。幾乎所有顏色及格式都是用 CSS 套上去的，程式碼片段及按鈕現在看起來漂亮多了。
 
-### Bundler: Before and After CSS
+### Bundler: CSS 套用前與套用後
 
 <img src='img/css_bundler.png'>
 
