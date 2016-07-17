@@ -1,29 +1,29 @@
 message <<-MARKDOWN
-### Goal
+### 目的
 
-To teach you Ruby we are going to explain the basic building blocks used in the Ruby language and allow you reinforce what you've learned through challenges.
+為了教會你 Ruby，我們將會解釋 Ruby 語言中最基本的構件，並強化你在先前挑戰中所學會的東西。
 
-When you have completed this curriculum you should understand:
+當你結束這個課程，你將學會：
 
-* The command line and why we use it
-* How to run your Ruby code interactively (irb) or from a file
-* Simple types like numbers, strings, and booleans
-* Data structures like arrays and hashes
-* Object concepts like Classes
+* Command Line，以及我們要使用這個工具的原因
+* 如何在檔案裡 (或使用 irb) 與你的 Ruby 程式碼互動
+* 幾個簡單的類型，如：數值 (numbers)，字串 (strings)、布林值 (booleans)
+* 資料結構，如：陣列 (arrays)、雜湊 (hashes)
+* 物件概念，如：型別 (Classes)
 
-### Requirements
+### 需求
 
-We're going to be working with:
+我們將會用到這些東西：
 
 * Ruby
-* A command line program
-* A text editor of your choice
+* 命令列程式 (command line program)
+* 你自己選的文字編輯
 
-Everything should be set up the night before during our
-<a href="/installfest">Installfest</a>. Please
-ensure you have everything working _before_ you show up for the workshop.
+以上這些都應該在先前的
+<a href="/installfest">安裝趴</a>
+完裝完畢。請在你出席工作坊 「_之前_ 」確保以上內容都能正常運作。
 
-You can verify that you have everything working by trying this out in your terminal:
+要確認一切都沒問題的話，可以在終端機輸入以下內容：
 
 <div class="console"><pre>
 $ irb
@@ -33,41 +33,41 @@ $
 </pre>
 </div>
 
-If you can do that, you are probably good to go.
+如果這些都能正常執行的話，那你就可以開始了。
 
-### Format
+### 格式
 
-Each lesson will look like this:
+每一課的格式都會長這樣：
 
 <div style="background: white; border: 1px solid black; padding-left: 4em;">
-  <h1 class="doc_title" style="margin-top: 0em;">Step Title</h1>
+  <h1 class="doc_title" style="margin-top: 0em;">標題</h1>
   <div class="goals">
-    <h1>Goal:</h1>
-    <p>Description of the current step.
-    <p>Red because big goals are scary.
+    <h1>目標：</h1>
+    <p>描述我們要做什麼。
+    <p>紅的明顯，因為大目標看起來很嚇人。
   </div>
   <div class="steps">
-    <h1>Steps:</h1>
-    <pre class="term">steps to take.</pre>
+    <h1>步驟：</h1>
+    <pre class="term">要做的步驟</pre>
     <div class="console">
       <pre>
 def code_to_write
   1 + 1
 end</pre>
     </div>
-    <p>Yellow because we've gotten it done, but we have no clue what's going on.
+    <p>用黃色是因為我們做完了，但知其然卻不知其所以然。
   </div>
   <div class="challenge">
-    <h1>Challenges</h1>
+    <h1>挑戰</h1>
 
-    <p>A list of activities to try to reinforce the concepts learned in the lesson</p>
+    <p>一系列的挑戰活動，可以用來強化我們在這堂課裡學會的觀念。</p>
 
-    <p>Orange because it stimulates the brain by <a href="http://www.color-wheel-pro.com/color-meaning.html">increasing its oxygen supply</a>.</p>
+    <p>用橘色是因為它能刺激你大腦的<a href="http://www.color-wheel-pro.com/color-meaning.html">供氧量</a>。<p>
   </div>
   <div class="explanation">
-    <h1>Explanation</h1>
-    <p>Details of what the steps actually did... spell out the cause and effect.
-    <p>Green because we can tie everything together now.
+    <h1>解釋</h1>
+    <p>關於這些步驟實際上做了什麼的細節，詳述原因與效果。
+    <p>用綠色是因為現在我們把一切都連在一起了。
   </div>
 </div>
 MARKDOWN
