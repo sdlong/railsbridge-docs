@@ -1,31 +1,39 @@
 goals do
-  goal "Be able to use the basic building blocks of JavaScript code"
-  goal "Do simple calculations"
-  goal "Use and understand variables"
-  goal "Use and understand arrays"
-  goal "Use loops and conditional statements"
+  goal "
+  能使用基本的 JavaScript 區塊"
+  goal "
+  簡單的運算"
+  goal "
+  使用並理解「變數」（variables）"
+  goal "
+  使用並理解「陣列」（arrays）"
+  goal "
+  使用「迴圈」（loops）跟「條件式」（conditional statements）"
 end
 
 overview do
   message <<-MARKDOWN
-JavaScript is a fully featured programming language with variables, loops,
-and conditionals. Just like Ruby, Java, Python, and PHP, you can use JavaScript
-to do math, model large systems, and perform complex calculations – all in your browser!
-In this lesson, we'll learn about the fundamentals of the JavaScript programming language.
+在 JavaScript 這個程式語言，哪裡你都能碰到 「變數」（variables）、「迴圈」（loops）跟「條件式」。
+
+
+就像 Ruby, Java, Python, PHP，在瀏覽器中，你能拿 JavaScript 來運算、模擬大型系統、表現出複雜的運算。
+這堂課，我們會學習 JavaScript 最基本的東西。
   MARKDOWN
 
 end
 
 steps do
   step do
-    message "Open up your browser's developer tools, and click over to the console tab. Type the following code:"
+    message "
+    打開瀏覽器中的開發者工具，在控制台頁面輸入以下的程式碼"
 
     source_code :javascript, <<-JAVASCRIPT
       console.log('programming!')
     JAVASCRIPT
 
     message <<-MARKDOWN
-Press enter. Your browser should now look like this:
+
+按下enter，瀏覽器應該看起來像這樣：
 <img src="img/browser_console.png" alt="image of browser console with console.log"></img>
 
 Congrats, you just wrote your first lines of JavaScript code! __console.log__ is an important function –
