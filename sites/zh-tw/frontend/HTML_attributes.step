@@ -1,37 +1,34 @@
 goals do
-  goal "Code some common HTML attributes"
-  goal "Use class and id attributes as hooks for CSS styles"
+  goal "寫些常見的 HTML 標籤"
+  goal "用 class 及 id 標籤當作 CSS 樣式的 hook。
 end
 
 overview do
 
   message <<-MARKDOWN
 
-## What are attributes?
+## 什麼是標籤？
 
-HTML tags give the browser information about their content, like whether it's header text, or a paragraph, or a list.
-**Attributes** are extra information included with the tag, such as the URL for a link tag, or the location of a file
-for an image tag.
+HTML 標籤會告訴瀏覽器有關標籤的資訊，例如他是不是標頭的文字、段落或是列表。**屬性**則是標籤包含的額外資訊，像是連結標籤的 URL，或是圖片標籤的檔案位置。
 
-Form elements use an attribute to tell the browser what type of input they are,
-so the results will be easy to tell apart. This input:
+表單元件會利用屬性來告訴瀏覽器自己輸入的資料是什麼類型，
+so the results will be easy to tell apart.底下這個輸入欄位：
 
   MARKDOWN
   source_code :html, "<input type=\"radio\" name=\"rando-radio\">"
   message <<-MARKDOWN
 
-looks like a radio button: <input type="radio" name="rando-radio">, but
+看起來像是顆按鈕：<input type="radio" name="rando-radio">，但
 
   MARKDOWN
   source_code :html, "<input type=\"password\" name=\"fake-password\" value=\"ick\">"
   message <<-MARKDOWN
 
-looks like a password text input: <input type="password" name="rando-radio" value="ick"> even though they use the same **tag**.
+看起來卻像密碼輸入欄位：<input type="password" name="rando-radio" value="ick"> 即使它們用了同樣的**標籤**。
 
-## IDs and Classes
+## IDs 及 Classes
 
-Two of the most important attributes that an element can have are its `id` and its `class`. With these attributes,
-we can assign names to elements and groups of elements, then apply CSS styles using the names we give them.
+元件可以擁有的最重要的兩種屬性分別是 `id` 及 `class`。透過這兩種屬性，我們可以把名稱賦予到元件或是元件群組上，然後再利用這些名稱來套用 CSS 樣式。
 
 MARKDOWN
 
@@ -42,29 +39,24 @@ MARKDOWN
 MARKDOWN
 
   message <<-MARKDOWN
-In our CSS, we use special syntax to tell the browser if we're talking about an ID or a class name. IDs are indicated with a
-hash, like this: `#intro`. Classes are indicated with a dot: `.special`
+在 CSS 裡，我們會利用特殊語法來告訴瀏覽器我們指的是 ID 或是類別名稱。ID 會用井字來表達，像是 `#intro`。類別則是用「點」來表達：`.special`
+
   MARKDOWN
 
   tip do  message <<-MARKDOWN
-## When should I use a class, and when should I use an ID?
+## 什麼時候該用 class，什麼時候該用 ID ？
 
-**ID** attributes are unique labels, for identifying things you'll only ever have one
-of. For example, if you ran a news website, you might have a masthead element
-that only appears once, so you could give it an id
-like `handsome-header`.
+**ID** 屬性只能有一個，這可以用來辨識你永遠只會有一個的東西。例如假設你經營新聞網站，你的報頭很可能只有一個，這樣你才能給它一個像是 `handsome-header` 的 id。
 
-**Class** attributes should be used to group together similar elements; for example, you might give certain
-paragraphs a class of `special` and use that class to highlight them.
+**Class** 標籤應該用來將類似的元件構成一個群組；例如你可能會賦予特定段落 `special` class，並用這個 class 使它們突出。
 
-In general, only use `id` if you're certain that it will only appear on a single element. For everything else,
-use `class`.
+一般來說，只有在你確定 id 會出現在某個特定元件上時才會用 id。其它的情況請用 `class`。
 
   MARKDOWN
   end
   message <<-MARKDOWN
 
-Let's look at IDs and classes in action. So far we've only applied styles to HTML tags like `<p>` and `<h1>`. But what if we want to apply a style to only a few of the instances of a given tag? We don't want _every_ paragraph to look special, so we can't add our style directly to the `<p>` tag.
+我們現在就來看看 IDs 及 Classes 吧。目前我們只有在 HTML 標籤上套用像是 `<p>` 及 `<h1>` 樣式。那如我們只想把樣式套到一小部份的標籤上該怎麼做呢？我們不希望_所有_段落都是特別的（special），所以不能直接把樣式套到 `<p>` 標籤上。
 
 MARKDOWN
 
@@ -73,7 +65,7 @@ end
 steps do
 
   step do
-    message "Let's add some classes and ids to our HTML. Start by adding one or two more paragraphs of text to the bottom of your HTML document. The last lines might look like this:"
+    message "在我們的 HTML 加些 classes 及 ids 吧。首先在你的 HTML 文件底下加上一或兩個段落。最後幾行看起來可能像這樣："
     source_code :html, <<HTML
 <h1>Hello <em>World</em>!</h1>
 <p>My name is Rachel.</p>
@@ -88,7 +80,7 @@ HTML
   end
 
   step do
-    message "Add the class 'special' to your first paragraph. It'll look something like this:"
+    message "在你的第一個段加入 `special` class。加完後看起來像這樣："
     source_code :html, <<HTML
 <h1>Hello <em>World</em>!</h1>
 <p class="special">My name is Rachel.</p>
@@ -100,19 +92,19 @@ HTML
 </ul>
 <p>I hear RailsBridge needs volunteers, should I volunteer? :)</p>
 HTML
-    message "Refresh the page in the browser. You should see the new paragraphs you added, but no styling changes."
-    message "Many HTML attributes, like classes and ids, don't convey visual information. Your site will look the exact same until we use the class to add CSS styling."
+    message "在瀏覽器裡重新整理這一頁。你應該會看到新的段落被加上，但樣式沒有變化。"
+    message "許多 HTML 標籤（像是 class 及 id）並不帶有任何視覺外觀的資訊。在使用這些 class 來加上 CSS 樣式前，你的網站看起來都還是完全一樣。 Your site will look the exact same until we use the class to add CSS styling."
   end
 
   step do
-    message "To add a style rule that will apply to a class, use the syntax `.class-name` for your selector. It will be almost the same as the styles that you added to `<h1>` and `<p>`, but with a period at the beginning of your class name."
-    message "Try giving the 'special' class a green border. Add this rule inside of your `style` tag:"
+    message "如果你希望將樣式規則套到某個指定的 class，請在選擇器內使用 `.class-name` 語法。這跟你在 `<h1>` 及 `<p>` 加上樣式的過程幾乎一樣，唯一差別在於 class 名稱前面多了個「.」。"
+    message "試著在 'special' class 加上綠色邊框。將這條規則加到你的樣式標籤裡："
     source_code :css, <<CSS
 .special {
   border: 1px solid green;
 }
 CSS
-    message "Refresh the page in the browser. You'll see something like this:"
+    message "在瀏覽器裡重新整理頁面。你應該會看到像是這樣的東西："
     img src: 'img/css_class.png'
   end
 
@@ -131,7 +123,7 @@ CSS
 </ul>
 <p>I hear RailsBridge needs volunteers, should I volunteer!?!</p>
 HTML
-    message "Save and refresh the page in the browser. Again, you shouldn't see any difference."
+    message "存檔並在瀏覽器裡重新整理頁面。同樣的，這次你也不會看到任何變動。"
   end
 
   step do
@@ -154,10 +146,9 @@ end
 
 explanation do
   message <<-MARKDOWN
-Attributes let us add extra information to an HTML tag. IDs and classes are specific types of attributes that let us
-give names to our elements.
+屬性讓我們可以在 HTML 標籤增加額外的資訊。id 及 class 標籤則是專門讓我們賦予元件名稱的屬性。
 
-CSS uses special syntax to indicate if we're using an ID, a class, or just the tag itself in our style.
+CSS 會使用特殊語法來表明樣式所用的是 id、class 或是標籤。
 
 MARKDOWN
 
