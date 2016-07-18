@@ -1,6 +1,6 @@
 goals do
   goal "寫些常見的 HTML 標籤"
-  goal "用 class 及 id 標籤當作 CSS 樣式的 hook。
+  goal "用 class 及 id 標籤當作 CSS 樣式的 hook。"
 end
 
 overview do
@@ -9,10 +9,9 @@ overview do
 
 ## 什麼是標籤？
 
-HTML 標籤會告訴瀏覽器有關標籤的資訊，例如他是不是標頭的文字、段落或是列表。**屬性**則是標籤包含的額外資訊，像是連結標籤的 URL，或是圖片標籤的檔案位置。
+HTML 標籤會告訴瀏覽器有關標籤內容的資訊，例如他是不是標頭的文字、段落或是列表。**屬性**則是標籤包含的額外資訊，像是連結標籤的 URL，或是圖片標籤的檔案位置。
 
-表單元件會利用屬性來告訴瀏覽器自己輸入的資料是什麼類型，
-so the results will be easy to tell apart.底下這個輸入欄位：
+表單元件會利用屬性來告訴瀏覽器自己輸入的資料是什麼類型，這樣會比較容易分辨。底下這個輸入欄位：
 
   MARKDOWN
   source_code :html, "<input type=\"radio\" name=\"rando-radio\">"
@@ -39,24 +38,24 @@ MARKDOWN
 MARKDOWN
 
   message <<-MARKDOWN
-在 CSS 裡，我們會利用特殊語法來告訴瀏覽器我們指的是 ID 或是類別名稱。ID 會用井字來表達，像是 `#intro`。類別則是用「點」來表達：`.special`
+在 CSS 裡，我們會利用特殊語法來告訴瀏覽器我們指的是 ID 或是 class 名稱。ID 會用 `#` 來表示，像是 `#intro`。類別則是用 `.` 來表達：`.special`
 
   MARKDOWN
 
   tip do  message <<-MARKDOWN
 ## 什麼時候該用 class，什麼時候該用 ID ？
 
-**ID** 屬性只能有一個，這可以用來辨識你永遠只會有一個的東西。例如假設你經營新聞網站，你的報頭很可能只有一個，這樣你才能給它一個像是 `handsome-header` 的 id。
+**id** 屬性只能有一個，這可以用來辨識你永遠只會有一個的東西。例如假設你經營新聞網站，你的報頭很可能只有一個，這樣你才能給它一個像是 `handsome-header` 的 id。
 
-**Class** 標籤應該用來將類似的元件構成一個群組；例如你可能會賦予特定段落 `special` class，並用這個 class 使它們突出。
+**class** 標籤應該用來將相似的元件構成一個群組；例如你可能會賦予特定段落 `special` class，並用這個 class 使它們看起來顯眼。
 
-一般來說，只有在你確定 id 會出現在某個特定元件上時才會用 id。其它的情況請用 `class`。
+一般來說，只有在你確定 id 會出現在某個獨一無二的元件上時才會用 id。其它的情況請用 `class`。
 
   MARKDOWN
   end
   message <<-MARKDOWN
 
-我們現在就來看看 IDs 及 Classes 吧。目前我們只有在 HTML 標籤上套用像是 `<p>` 及 `<h1>` 樣式。那如我們只想把樣式套到一小部份的標籤上該怎麼做呢？我們不希望_所有_段落都是特別的（special），所以不能直接把樣式套到 `<p>` 標籤上。
+我們現在就來看看 id 及 class 吧。目前我們只有在 HTML 標籤上套用像是 `<p>` 及 `<h1>` 樣式。那如我們只想把樣式套到一小部份的標籤上該怎麼做呢？我們不希望_所有_段落都是特別的（special），所以不能直接把樣式套到 `<p>` 標籤上。
 
 MARKDOWN
 
@@ -65,7 +64,7 @@ end
 steps do
 
   step do
-    message "在我們的 HTML 加些 classes 及 ids 吧。首先在你的 HTML 文件底下加上一或兩個段落。最後幾行看起來可能像這樣："
+    message "在我們的 HTML 加些 class 及 id 吧。首先在你的 HTML 文件底下加上一或兩個段落。最後幾行看起來可能像這樣："
     source_code :html, <<HTML
 <h1>Hello <em>World</em>!</h1>
 <p>My name is Rachel.</p>
@@ -93,12 +92,12 @@ HTML
 <p>I hear RailsBridge needs volunteers, should I volunteer? :)</p>
 HTML
     message "在瀏覽器裡重新整理這一頁。你應該會看到新的段落被加上，但樣式沒有變化。"
-    message "許多 HTML 標籤（像是 class 及 id）並不帶有任何視覺外觀的資訊。在使用這些 class 來加上 CSS 樣式前，你的網站看起來都還是完全一樣。 Your site will look the exact same until we use the class to add CSS styling."
+    message "許多 HTML 標籤（像是 class 及 id）並不帶有任何視覺外觀的資訊。在使用這些 class 來加上 CSS 樣式前，你的網站看起來還是完全一樣。"
   end
 
   step do
-    message "如果你希望將樣式規則套到某個指定的 class，請在選擇器內使用 `.class-name` 語法。這跟你在 `<h1>` 及 `<p>` 加上樣式的過程幾乎一樣，唯一差別在於 class 名稱前面多了個「.」。"
-    message "試著在 'special' class 加上綠色邊框。將這條規則加到你的樣式標籤裡："
+    message "如果你希望將樣式規則套到某個指定的 class，請用 `.class-name` 語法。這跟你在 `<h1>` 及 `<p>` 加上樣式的過程幾乎一樣，唯一差別在於 class 名稱前面多了個 `.`。"
+    message "試著在 「special」 class 加上綠色邊框。將這條規則加到你的樣式標籤裡："
     source_code :css, <<CSS
 .special {
   border: 1px solid green;
@@ -109,7 +108,7 @@ CSS
   end
 
   step do
-    message "Let's wrap your name in a `span` tag and give that an ID of 'user-name'. It'll look something like this:"
+    message "把你的名字用 `span` 標籤包起來，並給它 「user-name」 的 id 吧。做完後看起來會像這樣："
     source_code :html, <<HTML
 <h1>Hello <em>World</em>!</h1>
 <p class="special">My name is
@@ -127,16 +126,16 @@ HTML
   end
 
   step do
-    message "Now, add the corresponding style rule for your ID, using the syntax `#id-name` for your selector. Try making the 'user-name' id look bold. Add this rule inside of your `style` tag:"
+    message "現在加上你的 id 相對應的樣式規則，請使用 `#id-name` 語法。試試看讓 「user-name」 id 變成粗體。在你的樣式標籤加入這條規則："
     source_code :css, <<CSS
 #user-name {
   font-weight: bold;
 }
 CSS
     message <<-MARKDOWN
-(Note: The span is just an element that lets you apply a class, id, or other attribute to a string of text without adding any line breaks. Browsers won't give it any styling by default.)
+（註: span 只是用來使你能在文字加上 class、id 或其它標籤，且不必換行的元件。瀏覽器預設不會幫它加上任何樣式。）
 
-Once you add your style rule and refresh the page in the browser, you'll see something like this:
+一旦你加上樣式並在瀏覽器裡重新整理頁面，你就會看到類似這樣的畫面：
     MARKDOWN
     img src: 'img/css_id.png'
   end
@@ -148,7 +147,7 @@ explanation do
   message <<-MARKDOWN
 屬性讓我們可以在 HTML 標籤增加額外的資訊。id 及 class 標籤則是專門讓我們賦予元件名稱的屬性。
 
-CSS 會使用特殊語法來表明樣式所用的是 id、class 或是標籤。
+CSS 會使用特殊語法來表明樣式所用的是 id、class 或是自訂樣式的標籤。
 
 MARKDOWN
 
