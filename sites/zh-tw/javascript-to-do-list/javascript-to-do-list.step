@@ -6,8 +6,11 @@ in a modern web application. You're going to be building a personal to do list a
 You've decided that you'd like to:
 
 * Add an item to your list
+*
 * Mark an item as complete
+*
 * Load your list from multiple computers.
+*
 
 You've sketched up an initial screenshot of what you want it to look like:
 
@@ -19,14 +22,21 @@ When you have completed today's goal of getting the basic
 application online you should understand:
 
 * How JavaScript, CSS, and HTML interact with the browser.
+*
 * How to use JavaScript to interact with a server.
+*
 * How to incrementally add features to your application.
+*
 * How to get your application online.
+*
+
 
 ### Schedule
 
 * 2-ish hours of JavaScript and the basics of clients and servers.
+*
 * 3-ish hours of adding features to you application, broken up into 1 hour chunks.
+*
 
 This is just a rough guideline, not a mandate. Some steps you'll go
 over and some you'll go under. It'll all work out by the end of the
@@ -37,7 +47,9 @@ day. Probably.
 When programming, you'll generally want these tools on hand:
 
   * An internet connection. We're going to be communicating with other websites using JavaScript.
+  *
   * Your browser to see the code running (I recommend Chrome, but any will do!)
+  *
   * A text editor to change the code (I recommend <a
     href="http://www.sublimetext.com/">Sublime</a>)
   * A Javascript console so you can experiment and print out debugging
@@ -54,4 +66,3 @@ insert 'lesson_format'
 insert 'teachers_note'
 
 next_step "the_basics_of_a_website"
-
