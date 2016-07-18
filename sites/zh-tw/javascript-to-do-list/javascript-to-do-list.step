@@ -1,64 +1,64 @@
 message <<-MARKDOWN
-### Goal
+### 目標
 
-By the end of this session, you should understand how JavaScript is used
-in a modern web application. You're going to be building a personal to do list application.
-You've decided that you'd like to:
 
-* Add an item to your list
-*
-* Mark an item as complete
-*
-* Load your list from multiple computers.
-*
 
-You've sketched up an initial screenshot of what you want it to look like:
+在這個章節之前，你應該知道 JavaScript 是如何被運用在網頁裡面了。
+現在我們要打造一份個人的專屬的代辦事項清單。它會有以下這些功能。
 
+
+* 增加一個代辦事項到你的清單中。
+
+* 勾選已經完成的代辦事項。
+
+* 每台電腦都可以讀取你的清單。
+
+
+你心中的清單初始樣貌已經勾勒出來了：
 ![Browser window with list application running](img/finished_app.png)
 
-### Meta-Goal
+### 目標還有...
 
-When you have completed today's goal of getting the basic
-application online you should understand:
+當你完成了今天線上基本應用程式之後，你應該可以了解：
 
-* How JavaScript, CSS, and HTML interact with the browser.
-*
-* How to use JavaScript to interact with a server.
-*
-* How to incrementally add features to your application.
-*
-* How to get your application online.
-*
+* JavaScript, CSS, 跟 HTML 如何在瀏覽器互相配合。
+
+* JavaScript 如何跟伺服器互相配合。
+
+* 如何一次次的增加功能到應用程式中。
+
+* 如何把你的應用程式部屬上線運作。
 
 
-### Schedule
+### 時間安排
+* 大約兩小時： JavaScript 跟伺服器端、客戶端的基礎知識。
 
-* 2-ish hours of JavaScript and the basics of clients and servers.
-*
-* 3-ish hours of adding features to you application, broken up into 1 hour chunks.
-*
+* 大約三小時：增加一些功能到應用程式裡 -- 每個大單元一個小時。
 
-This is just a rough guideline, not a mandate. Some steps you'll go
-over and some you'll go under. It'll all work out by the end of the
-day. Probably.
 
-### Requirements
+這不是一份鉅細靡遺的教學，只是引導你給你一個大方向。有些步驟你可能會做過頭或做得不夠。
+總之，它可以在一天內完成...也許啦～
 
-When programming, you'll generally want these tools on hand:
 
-  * An internet connection. We're going to be communicating with other websites using JavaScript.
-  *
-  * Your browser to see the code running (I recommend Chrome, but any will do!)
-  *
-  * A text editor to change the code (I recommend <a
-    href="http://www.sublimetext.com/">Sublime</a>)
-  * A Javascript console so you can experiment and print out debugging
-  messages. This is built into your browser.
+### 需求
 
-Before you can start the tutorial, you'll need to <a href="IntermediateTodoList.zip">download the tutorial</a>
-to your computer to edit the source code.
 
-Once you've downloaded it, open index.html with your browser. You should see a mock up of your list. If you do not, get an instructor to help you out.
+寫程式的時候，通常需要這些工具在手邊：
+
+
+  * 一個能連上網的環境。我們將會使用 JavaScript 與其他的網站溝通。
+
+  * 瀏覽器，用來監測程式碼如何動作（推薦 Chrome）
+
+  * 文字編輯器，用來編輯程式碼（推薦 <a
+    href="http://www.sublimetext.com/">Sublime</a>）
+
+  * JavaScript 控制台，用來測試還有顯示除錯訊息。這個會內建在瀏覽器裡。
+
+
+在開始指導課程之前，請下載 <a href="IntermediateTodoList.zip">範例</a>，以便於編輯原始碼。
+下載完成後，請用瀏覽器打開 index.html，會看到一個代辦事項清單（不過還沒有任何作用）。如果有困難請找老師幫你。
+
 MARKDOWN
 
 insert 'lesson_format'
