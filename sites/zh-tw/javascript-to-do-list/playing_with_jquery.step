@@ -1,29 +1,33 @@
 goals do
-  goal "Write JavaScript code in a .js file."
-  goal "Write a function that takes advantage of jQuery."
+  goal "把 JavaScript 程式寫到 .js 檔案裡面"
+  goal "利用 jQuery 寫一個函式 （這個函式叫做 addItemToPage）"
 end
 
 overview do
   message <<-MARKDOWN
-In addition to being a powerful programming language, Javascript allows you to make your web site interactive.
-You can use it to build anything from a simple animation to a giant web application like Twitter
-or Github. It gives you total control to add, remove, or modify content you've made with HTML.
-You can also use it to change styles and add or remove classes.
 
-In this lesson, we'll also be using jQuery to make interacting with the page easier.
-jQuery is a JavaScript library that is widely used in the industry to alter pages,
-make requests, and create animations. We're going to create a function
-that adds a new item to our list.
+JavaScript 除了是一個強大的程式語言，它還能讓你的網站具有互動性。
+
+從簡單的動畫到大型網站（例如： Twitter、Github）你都能打造出來。
+
+JavaScript 給你完全的控制權，可以增加、刪除、修改 用HTML做出來的內容，也可以改變 CSS的 style、增加或移除 元素的 class、id...等等。
+
+這堂課，我們會使用 jQuery 讓網頁互動簡單一些。
+jQuery 是 JavaScript 的其中一個函式庫，廣泛用在網站前端工程：改變網頁、送出請求、建立動畫效果...
+
+為了在清單裡面增加代辦事項，我們來建立一個函式吧～
   MARKDOWN
 end
 
 steps do
   step do
     message <<-MARKDOWN
-  In addition to writing JavaScript in the browser's console, you can also write javascript in .js files.
-  We're going to write our code in app.js, which will run whenever the page loads.
-  In this step, we're going to assign a variable in app.js using the jQuery selector.
-  Open app.js in your text editor, and add the following code.
+
+  除了在瀏覽器的控制台（console）寫入 JavaScript 之外，也可以寫在 .js 檔案。
+  當瀏覽器讀取網頁的時候，app.js 這個檔案會被執行，我們會把程式碼寫在這邊。
+
+  在這個步驟，我們將在 app.js 使用 jQuery 選擇器來宣告變數。
+  在文字編輯器打開 app.js，輸入下面的程式。
     MARKDOWN
 
     source_code :javascript, <<-JAVASCRIPT
@@ -32,17 +36,26 @@ steps do
     JAVASCRIPT
 
     message <<-MARKDOWN
-  Refresh the page in your browser. Open the console and write 'itemTemplate' and 'list'. What do you see?
-  What other functions can you call on list and itemTemplate?
+
+  瀏覽器重新整理網頁，打開控制台接著輸入 'itemTemplate' 還有 'list'
+
+  你看到什麼？
+
+  list 跟 itemTemplate 有哪些函式可以使用？
     MARKDOWN
   end
 
 
   step do
     message <<-MARKDOWN
-    In this step, we're going to write a function to create items. It's going to create a copy of the
-    itemTemplate, add data to the new item, and append the new item to the list element. Add the
-    following code to the bottom of app.js.
+
+寫一個函式來增加代辦事項。
+
+流程：增加一份 itemTemplate 的拷貝（宣告叫做 item），增加一些資料到 item，
+然後把整份 item 增加(append)到 list element的後面（list element 內部）
+
+在 app.js 下方加入以下程式碼。
+
     MARKDOWN
 
     source_code :javascript, <<-JAVASCRIPT
@@ -58,7 +71,9 @@ steps do
     JAVASCRIPT
 
     message <<-MARKDOWN
-  Refresh the page and go back to the developer console. Lets use our new function! Type this into the console:
+
+重新整理頁面，接著我們可以用這個新建立的函式了！在控制台輸入以下程式
+
     MARKDOWN
 
     source_code :javascript, <<-JAVASCRIPT
@@ -67,7 +82,9 @@ steps do
     JAVASCRIPT
 
       message <<-MARKDOWN
-  Your list should now have an orange!
+
+  看看網頁，清單現在多了一個 orange 代辦事項~
+
     MARKDOWN
   end
 
