@@ -32,13 +32,13 @@ steps do
 
       <img src='/frontend/img/devtools_network.png'>
 
-      如果你點選一個檔案名稱，你可以看到該檔案的內容。This panel is a great place for debugging script linking or loading issues. (You can see HTTP headers and request params here too, with a little digging.)
+      如果你點選某個檔案名稱，你可以看到該檔案的內容。這面板很適合用來除錯腳本連結或讀取的問題。（稍微注意一下你還可以看到 HTTP 的標頭及請求參數。）
     MARKDOWN
   end
 
   step do
     message <<-MARKDOWN
-      The 'Console' is the JavaScript developer's secret weapon. It lets you run JavaScript by typing it in directly &mdash; and it runs your scripts _in the context of your page_, so you can interact directly with objects and functions you've defined. It's helpful for debugging and experimenting.
+      'console' 是 JavaScript 開發人員的利器。它可以讓你直接在裡面執行 JavaScript &mdash; 而且是在你頁面的環境下執行的。這樣你就可以直接跟定義好的物件及函式互動。這對除錯及測試有很大的幫助。
 
       <img src='/frontend/img/devtools_console.png'>
     MARKDOWN
@@ -46,7 +46,7 @@ steps do
 
   step do
     message <<-MARKDOWN
-      The 'Sources' panel is another JavaScript pro tool. If you're used to working with an IDE (Integrated Development Environment) that has a debugger, you'll be able to use many of the same techniques (like breakpoints, stack traces, and watch expressions) right here in the browser.
+      'sources' 面板是另一項 JavaSciprt 專業級的工具。如果你習慣用帶有除錯器的 IDE （Integrated Development Environment）工作，你將可以在瀏覽器裡直接使用許多相多的技巧（例如中斷點、堆棧追踪及監看式）。
 
       <img src='/frontend/img/devtools_script.png'>
     MARKDOWN
@@ -57,11 +57,9 @@ explanation do
 
   message <<-MARKDOWN
 
-## Keep Learning with Developer Tools
+## 持續學習開發工具
 
-With good browser developer tools, you can pick apart every website you visit. If you see cool
-CSS styles or JavaScript animations, you can always look under the hood and figure out how
-they're done. It's a great way to keep learning as a front-end developer.
+有了良好的瀏覽器開發者工具，你可以拆解任何你遇到的網站。例如當你看到很酷炫的 CSS 樣式，或 JavaScript 動畫時，你可以深入觀察並了解它們是怎麼被做出來的。身為前端開發人員，這是非常好的持續學習方法。
 
   MARKDOWN
 end
