@@ -1,22 +1,22 @@
 goals do
-  goal "Add some starter files"
+  goal "加入些起始用的檔案"
 end
 
 steps do
   step do
     message <<-MARKDOWN
-      Download the .zip file from <a href="front-end-lesson.zip">this link</a>
-      When the file download finishes, find it on your computer and unzip it.
+      從<a href="front-end-lesson.zip">這裡</a>下載 .zip 檔。
+      下載完後，在你的電腦裡找到並開啟它。
     MARKDOWN
   end
-  
+
   step do
     message <<-MARKDOWN
-      The zip file should contain a file called index.html and a directory of resources.
+      這份 zip 檔會包含一個叫 index.html 的檔案及 resources 資料夾。
 
       <img src='img/zip.png'>
 
-      Drag the file called index.html and resources folder into your project folder. Go ahead and replace the index.html file you may already have in there.
+      將 index.html 檔及 resources 資料夾拖到你的專案目錄內。如果你專案裡已經有 index.html，請用它取代下載來的 index.html 檔案。
     MARKDOWN
   end
 end
@@ -24,12 +24,11 @@ end
 explanation do
   message <<-MARKDOWN
 
-## What Are These Files?
+## 這些檔案是什麼？
 
-Just to save you some time, we've supplied a bare bones HTML document, a CSS stylesheet,
-a JavaScript file, and a placeholder image.
+為了幫你節省時間，我們提供了具有基本骨架的 HTML 文件、CSS 樣式表、JavaScript 檔案及預留位置用的圖片。
 
-If you are starting a new project in the future, try typing it all out by hand a few times
+如果你正在 If you are starting a new project in the future, try typing it all out by hand a few times
 to get the hang of it, and then try starting with some other people's HTML boilerplate code
 that they've shared:
 
