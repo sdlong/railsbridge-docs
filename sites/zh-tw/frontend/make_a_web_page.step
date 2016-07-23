@@ -1,6 +1,6 @@
 goals do
-  goal "在瀏覽器裡檢視上一章起頭用的檔案"
-  goal "Compare strategies for CSS and JavaScript inclusion (inline vs. link)"
+  goal "在瀏覽器裡檢視讓你起頭用的檔案"
+  goal "比較 CSS 及 JavaScript 引入的方式（內嵌與連結）"
 end
 
 steps do
@@ -27,17 +27,17 @@ steps do
   step do
     message <<-MARKDOWN
 
-當你寫程式碼時，你會常常希望可以加上註解，註解可以幫助你或其他人看懂程式碼。HTML 註解標籤開頭是 `<!--`，並以 `-->` 當作結尾。底下是一個範例：
+當寫程式碼時，你會常常希望可以加上註解，註解可以幫助你及其他人看懂程式碼。HTML 註解標籤開頭是 `<!--`，並以 `-->` 當作結尾。底下是一個範例：
     MARKDOWN
 
 source_code :html, "<!-- This is a comment. The browser ignores it. -->"
 
     message <<-MARKDOWN
-我們也可以利用這項技巧讓一段程式碼暫時不執行。這種技巧被稱為「把程式碼註解掉」。
+我們也可以利用這項技巧讓一段程式碼暫時不執行。這叫做「把程式碼註解掉」。
 
-記得我們在寫 **hello.html** 檔案時，我們直接把 JavaScript 及 CSS 放到 HTML 文件裡。你也可以利用連結從外部檔案引入 JS 及 CSS。**index.html** 檔案包含一個 JavaScript 檔及 CSS 檔的連結，不過它們被註解掉了。（意思是它們被包在 HTML 標籤裡，且這種標籤會告訴瀏覽器忽略這些檔案）
+記得我們在寫 **hello.html** 檔案時，我們直接把 JavaScript 及 CSS 放到 HTML 文件裡。你也可以利用連結從外部檔案引入 JS 及 CSS。**index.html** 檔案包含一個 JavaScript 檔及 CSS 檔的連結，不過它們被註解掉了。（意思是它們被包在 HTML 標籤裡，且 HTML 標籤會告訴瀏覽器忽略這些檔案）
 
-Look through **index.html** and find the links to the CSS and JavaScript files. Delete the comment tags from around them so that the browser will read them. The lines should change color in your text editor: comments are usually displayed in a dull color in text editors to show that it's code that will be ignored.
+把 **index.html** 看過一遍並找出 CSS 及 JavaScript 檔案的連結。刪掉它們的註解標籤，讓瀏覽器會去讀它們。刪掉後這段程式碼在文字編輯器裡的顏色應該會變：因為註解通常會用比較暗淡不明顯的顏色顯示，這樣比較不會被我們的眼睛注意到。
     MARKDOWN
 
   end
@@ -48,15 +48,15 @@ explanation do
 
   message <<-MARKDOWN
 
-## Inline vs. Linked
+## 內嵌與連結
 
-Javascript and CSS can both be put directly into the HTML page, but on bigger projects, you'll usually want to place your JS and CSS in separate files and include those files in your HTML with a link.
+Javascript 及 CSS 都可以直接放到 HTML 頁面裡，但在較大型的專案裡，你通常會想要把 JS 與 CSS 放在不同的檔案裡，並在 HTML 內用連結來引入它們。
 
-Linking files will help you keep your code organized and easier to maintain. It means, for example, that if you change the style of buttons on your website, you'll be able to change it in just one place, instead of having to update every page.
+連結的檔案可以讓程式碼有架構且比較容易維護。這意思是假設你想改變網站的按鈕樣式，你只需要改一個地方就好，不必到每個頁面裡修改。
 
 ### Javascript
 
-* A JavaScript tag looks like this when it's wrapping code written right into the HTML page:
+* 當使用內嵌引入（直接將 JavaScript 程式碼寫到 HTML 頁面裡）時，JavaScript 標籤看起來像這樣：
 
   MARKDOWN
   source_code :html, <<-HTML
@@ -66,9 +66,9 @@ Linking files will help you keep your code organized and easier to maintain. It 
   HTML
   message <<-MARKDOWN
 
-In JavaScript you write comments by starting a line with `//`.
+JavaScript 裡註解的方式是在一行開頭的地方寫「//」。
 
-* A JavaScript tag looks like this when it's a link:
+* 當使用連結引入時，JavaScript 標籤看起來像這樣：
 
   MARKDOWN
   source_code :html, <<-HTML
@@ -78,7 +78,7 @@ In JavaScript you write comments by starting a line with `//`.
 
 ### CSS
 
-* A CSS stylesheet looks like this when it's written right into the HTML page:
+* 當使用內嵌引入（直接將 CSS 程式碼寫到 HTML 頁面裡）時，CSS 樣式看起來像這樣：
 
   MARKDOWN
   source_code :html, <<-HTML
@@ -88,9 +88,9 @@ In JavaScript you write comments by starting a line with `//`.
   HTML
   message <<-MARKDOWN
 
-In CSS you write comments by wrapping the comment in inside a `/*` (start a comment) and `*/` (finish a comment). A comment can go over several lines.
+CSS 寫註解的方式是用 `/*`（註解的開頭）及 `*/`（註解的結尾）將註解包住。註解可以包含好幾行程式碼。
 
-* A CSS tag looks like this when it's a link:
+* 當使用連結引入時，CSS 標籤看起來像這樣：
 
   MARKDOWN
   source_code :html, <<-HTML
