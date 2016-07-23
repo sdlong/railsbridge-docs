@@ -1,7 +1,7 @@
 div :class => "deploying" do
-  h1 "Optional Step: Deploying to GitHub"
+  h1 "選用步聚：發佈到 GitHub"
   blockquote do
-    message "Before the next step, you could try deploying (sending your code) your page to GitHub! If you haven't used Git or GitHub before, **it's okay to do this later**."
+    message "在進行下一步之前，你可以嘗試把你的頁面發佈（傳送你的程式碼）到 GitHub！如果你之前還沒有用過 Git 或 GitHub，**之後再做也行。**"
     link 'deploying_to_github'
   end
 end
