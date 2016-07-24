@@ -1,23 +1,23 @@
 goals do
-  goal "Discuss what a programming language is"
-  goal "Discuss some of the characteristics of the Ruby language"
+  goal "說說何謂程式語言"
+  goal "聊聊一些關於 Ruby 的語言特性"
 end
 
 explanation do
   message <<-CONTENTS
-  Every application on your computer was written by somebody, from the operating system to your web browser. Every program was written in some kind of programming language.
+  在電腦中，從作業系統到你的網頁瀏覽器，都是由他人所寫出來的應用程式。每個程式都是由某種程式語言所寫成。
 
-  Programming languages come in all shapes and sizes. Some are optimized for the speed at which the computer will execute them, and some are optimized for the speed at which a human can program in them.
+  這世上有各式各樣的程式語言。有些語言的優勢是強調能讓電腦執行地多快，有些則是強調人類能用它寫得多快。
 
-  Ruby was invented in the mid-1990s by Yukihiro Matsumoto -- Matz for short. Matz\' goals were to make programming faster and easier. \'Ruby is designed to make programmers happy.\'
+  至於 Ruby 則是由 Yukihiro Matsumoto -- 簡稱 Matz -- 於 90 年代中期所發明。Matz 當初的目的是想讓寫程式這件事可以變得更快、更簡單。他表示「 Ruby 是設計來讓寫程式的人感到快樂」。
 
-  Ruby\'s popularity soared with the invention of the **Ruby on Rails** web framework, but Ruby is useful for many more things than just websites. 
+  而雖說 Ruby 是因 **Ruby on Rails** 這個網頁框架才開始爆紅，但 Ruby 本身能應用在比網站更多的地方。
   CONTENTS
 end
 
 further_reading do
-  message '[Wikipedia\'s article on Ruby](https://en.wikipedia.org/wiki/Ruby_\(programming_language\))'
-  message 'If you know another programming language, see [Ruby From Other Languages](https://www.ruby-lang.org/en/documentation/ruby-from-other-languages) for a comparison'
+  message '[Wikipedia\'s article on Ruby](https://zh-tw.wikipedia.org/wiki/Ruby_\(programming_language\)) (或參考[正體中文版](https://www.wikiwand.com/zh-tw/Ruby))'
+  message '如果你會寫其他程式語言的話，可以從 [Ruby From Other Languages](https://www.ruby-lang.org/en/documentation/ruby-from-other-languages) 這篇文章來做個比較。'
 end
 
-next_step "command_line"
+next_step "命令行 (command_line)"
