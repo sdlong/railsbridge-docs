@@ -1,18 +1,15 @@
 # Working Effectively and Efficiently
+有成效地和效率高地做事
 
-We highly recommend you do the following:
+我們強烈建議你做到以下幾點:
 
-* Bring up your terminal and open 2 tabs:
-  * One is for regular terminal stuffs
-  * One will be for IRB (a.k.a. Rails console). We'll explain later.
-* Open your browser fresh or hide any windows you already have open.
-  * Bring up one window with two tabs
-    * One for this content
-    * One for interacting with your app.
-* Open your text editor and don't close it.
-* Hide all extra applications. Turn off Twitter, Facebook, IM, and all other distractions.
+* 帶上你的終端機並開啟2個分頁:
+  * 一個是作為一般的使用
+  * O另一個是作為IRB（又名，Rails console）。我們稍後會解釋
+* 打一個新的瀏覽器或隱藏任何你已經打開的視窗，然後開啟2個分頁
+    * 一個用於瀏覽此內容
+    * 一個用於執行你的app
+* 打開你的編輯器不要將其關閉
+* 隱藏所有其他不相干的應用程式。把Twitter、Facebook、IM把其他所有會分心的東西都關掉。
 
-By minimizing the number of things you interact with, you reduce the
-amount of time spent switching between them and the context lost as
-you work through the lessons. Having 50 tabs open in your web
-browser gets confusing.
+把與你互動的東西減少到最少，你可以省下許多時間在切換分頁和找此課程分頁。若瀏覽器有50個分頁會變得很混亂。

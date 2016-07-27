@@ -1,16 +1,16 @@
 message <<-MARKDOWN
-  # What we're going to do:
+  # 目標
 
-  * Make a new Rails app
-  * Add a few gems to make life easier
-  * Start the Rails server and see the default Rails page
-  * Learn a little about Bundler and dependency management
+  * 建一個新的Rails app
+  * 加一些gem使生活更輕鬆
+  * 啟動Rails server並看到預設的Rails頁面
+  * 瞭解一些關於Bundler與依存性管理
 
-  # Get Set Up
+  # 設置
 
-  First, let's get into a directory for RailsBridge projects (either by finding your existing one & moving there or making a new folder).
+  首先，讓我們進入RailsBridge這個專案的目錄（看你要找到現有的資料夾並移動它或建一個新資料夾）
 
-  If you don't already have a RailsBridge folder, use the commands `mkdir` and `cd` to create one and move into it:
+  如果你沒有RailsBridge的資料夾，使用 mkdir和cd指令去創建一個新的並且切換到此資料夾:
 MARKDOWN
 
 console_without_message "mkdir railsbridge"
@@ -23,53 +23,53 @@ MARKDOWN
 console "rails new job_board -T --skip-turbolinks"
 
 message <<-MARKDOWN
-  The `-T` in that command means that when you make new files using Rails generators, it doesn't automatically create test files using Test::Unit (the default Rails testing framework).
+  指令-T的意思是，當你用Rails generators新建資料夾時他不會自動產生使用測試單元的測試文件（預設的Rails測試框架）
 
-  Watch all the files that are created! Wow!
+  哇！看看所有創建的資料夾！
 
-  # Open the project in Sublime Text
+  # 在Sublime Text打開專案
 MARKDOWN
 
-console_with_message "Move into the directory for your new Rails app:", "cd job_board"
+console_with_message "把目錄移動進入你新的Rails app:", "cd job_board"
 
 message <<-MARKDOWN
-  And open the project in Sublime:
+  在Sublime Text打開專案:
 
-  * Open Sublime
-  * Under Project, choose "Add Folder to Project"
+  * 打開 Sublime
+  * 在Project底下, 選擇"Add Folder to Project"
 
-  (You must have at least one window open, so if that option is greyed out, open a window with cmd+n (Mac) or ctl+n (PC))
+  (你一定至少有一個視窗是打開的, 所以假如選項反灰無法點選你可以按cmd+n打開一個視窗)
 MARKDOWN
 
-discussion_box "Text Editor vs Command Line", "Review the differences between the the command line and your text editor, even if everyone already knows!"
+discussion_box "編輯器 vs 指令列", "瀏覽編輯器與終端機指令列有什麼不同, 即使你都知道了!"
 
-message "# Let's Talk About Dependencies"
+message "# 讓我們談談關於依存性(Dependencies)"
 
-message "When we created a new Rails app, it installed a bunch of stuff by default. The list of things Rails installed is in a file called `Gemfile`. If you want to add any additional third party code (aka **gems**), you can add more lines to the `Gemfile` and install them with `bundle`."
+message "當我們創建一個 Rails app, 他會安裝一推默認的東西. 這個安裝清單會在一個叫`Gemfile`的檔案裡。 假如你想安裝額外的第三方代碼 (又叫做 **gems**), 你可在`Gemfile`增加幾行代碼並用 `bundle`來安裝它們"
 
-console_with_message "Rails has already installed all the stuff we need, but you can always run bundle again to re-install gems, or install gems newly added to the Gemfile. In the command line, run the following command:", "bundle install"
+console_with_message "Rails已經安裝好很多我們需要的東西了, 但你可以時常執行 bundle一次來重新安裝gems, 或是有在Gemfile新增再去安裝. 在終端機執行以下指令:", "bundle install"
 
-discussion_box "What does 'bundle' do?", <<-MARKDOWN
- Bundler is the tool the Ruby community uses for dependency management.
+discussion_box "'bundle'做了什麼?", <<-MARKDOWN
+ Bundler 是一個Ruby社群使用在依存性管理的工具。
 
- * What's dependency management?
- * Why do we need it?
- * Why do we even need gems?
- * Is there a shorter method to use for `bundle install`? (Hint: yes!)
+ * 什麼是 dependency management?
+ * 為什麼我們需要它?
+ * 為什麼我們甚至需要 gems?
+ * 有沒有比較簡潔的方法來使用 `bundle install`? (Hint: yes!)
 MARKDOWN
 
-message "# Look at your empty app"
+message "# 看看你空的app"
 
-tip "Now is a good time to figure out how to have multiple tabs or windows of your terminal or command prompt. Starting and stopping the Rails server all day is tedious, so it's good to have one terminal tab or window for running commands, and a separate one for the server."
+tip "現在是弄清楚為什麼要在終端機或令提示字元上使用多個分頁或視窗的好時機。整天啟動和停止Rails server是很乏味的，所以好的做法是一個終端機分頁或視窗用來執行指令，另一個給server用。"
 
-console_with_message "Start the Rails server by running this command in the terminal:", "rails server"
+console_with_message "在終端機執行這個指令來啟動Rails server:", "rails server"
 
 message <<-MARKDOWN
-  Now, let's check out our default home page
+  現在，讓我們來檢查瀏覽器上的預設首頁
 
-  In the browser, visit <http://localhost:3000>
+  請前往 <http://localhost:3000>
 
-  Yup, that's the default Rails home page!
+  沒錯，這就是Rails預設的首頁!
 MARKDOWN
 
 next_step "the_request_cycle"

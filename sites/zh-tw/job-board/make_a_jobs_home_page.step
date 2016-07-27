@@ -1,91 +1,92 @@
 message <<-MARKDOWN
-  # What we're going to do:
+  # 目標:
 
-  * Play follow-the-error to guide our development
-  * Add routes, a controller, and a view to make a home page
-  * Learn how to read the routing info at <http://localhost:3000/rails/info>
+  * 遵循錯誤訊息來指引我們的開發
+  * 增加routes、controller和view製作出一個首頁
+  * 學習如何閱讀 <http://localhost:3000/rails/info>上的訊息
 
-  # Getting Started
+  # 開始吧
 
-  That Rails default page is boring. Let's add a page to list the open jobs at RailsBridgeCorp!
+  那個Rails預設頁面是無聊的。讓我們新增一個頁面來列出一些RailsBridge公司的公開職缺！
 
-  To start, let's visit the page that we want to put our jobs on: <http://localhost:3000/jobs>.
+  首先，讓我們進入我們想上架職缺的網址: <http://localhost:3000/jobs>.
 MARKDOWN
 
 error_box "No route matches [GET] '/jobs'"
 
 message <<-MARKDOWN
-  That's pretty reasonable, since we currently don't have any routes at all right now.
+  這是相當合理的，因為我們目前沒有設定任何的路徑(routes)。
 
-  # Adding Routes
+  # 新增路徑(Routes)
 
-  So it's looking for a route, but can't find one. Let's add one!
+  它要找一個路徑，但找不到。讓我們增加一個吧！
 
-  Open up the routes file. It's in the config directory, called `routes.rb`. If you're using Sublime Text 2, you can open it using keyboard shortcuts:
+  打開在confing目錄底下的routes.rb，如果你正使用Sublime，你可以用快捷鍵打開它:
 
-   * Hitting cmd + p (on Mac) or ctl + p (on PC)
-   * typing in `route`
-   * hitting enter
+   * cmd+p/t(on Mac)
+   * 輸入 `route`
+   * 按enter
 
-  Magic! (Sublime is using fuzzy search, so you can use the entire file path, or just part of the filename to go to files.)
+  神奇吧！（Sublime使用模糊搜尋，所以你可以輸入完整的文件路徑，或只輸入部分的檔名就可以找到文件。）
 MARKDOWN
 
-source_code_with_message "We're going to need a resource route, which will create EIGHT different routes for us. Add this to line two:", :ruby, "resources :jobs"
+source_code_with_message "我們會需要一個資源路徑(resource route)，這將為我們創建八個路徑。加入這個到第二行:", :ruby, "resources :jobs"
 
 message <<-MARKDOWN
-  Now, lets go look at what that made, by using the excellently helpful routes page: <http://localhost:3000/rails/info>.
+  現在，讓我們透過: <http://localhost:3000/rails/info>這個超有用的頁面來看看這是用什麼組成的。.
 MARKDOWN
 
-discussion_box "How to read the routes page.", <<-MARKDOWN
-  In your browser, visit <http://localhost:3000/rails/info>. Go over each of the columns and how to read it.
+discussion_box "如何閱讀路徑頁面(routes page)", <<-MARKDOWN
+  在你的瀏覽器前往 <http://localhost:3000/rails/info>. 讀取每個欄位。
 
   * Helper
-  * HTTP Verb (don't worry about going to in-depth with these yet)
+  * HTTP Verb (別擔心深入這些)
   * Path
   * Controller#Action
 
-  Why does the Helper column sometimes not have anything?
+  為什麼Helper這個欄位有時候沒有任何東西?
 
-  Can you find the line that will make `/jobs` a route?
+  你可以找到是哪一行給 `/jobs` 個路徑的?
 MARKDOWN
 
 message <<-MARKDOWN
-  Since adding the line `resources :jobs` made a route matching `/jobs`, let's go visit that page again: <http://localhost:3000/jobs>
+  因為加入這一行 `resources :jobs` 使得`/jobs`, 取得了一致的路徑，讓我們在查看那個頁面一次: <http://localhost:3000/jobs>
 MARKDOWN
 
-error_box "uninitialized constant JobsController"
+error_box "uninitialized constant JobsController
+(未初始化的常數JobsController)"
 
 message <<-MARKDOWN
-  Why does Rails now think it needs a JobsController?
+  為什麼現在的Rails認為它需要一個 JobsController?
 
-  # Add a controller
+  # 添加controller
 
-  Time for a shortcut!!! Unlike the scaffold that we make in Suggestotron that makes about a million different files, we're just going to use a Rails generator to make the files we need.
+  捷徑的時間到了！！！不像我們在Suggestotron所使用的scaffold產生一百萬個不同的檔案，我們只用使用Rails generator產生我們需要的檔案就好。
 MARKDOWN
 
 console "rails generate controller jobs"
 
-discussion_box "What did that command do?", <<-MARKDOWN
-  What files were made by that last command? Are they awesome?
+discussion_box "這條指令做了些什麼?", <<-MARKDOWN
+  最後這條指令產生哪些文件？
 
-  How will this change what error we see when we go to the jobs page?
+  當我們再次查看jobs page，這個改變會讓我們看到什麼錯誤?
 MARKDOWN
 
-message "Now: refresh <http://localhost:3000/jobs>"
+message "現在：重整 (http://localhost:3000/jobs) <http://localhost:3000/jobs>"
 
-error_box "The action 'index' could not be found for JobsController"
+error_box "The action 'index' could not be found for JobsController(在JobsController找不到index)"
 
 message <<-MARKDOWN
-  What is telling Rails to look in JobsController?
+  這是告訴Rails去JobsController看什麼?
 
-  Let's go back to <http://localhost:3000/rails/info> again and look at what controller and method (AKA action) the route /jobs is pointing to.
+  讓我們在查看 <http://localhost:3000/rails/info> 一次並且查看controller跟method(又稱為 action)的/job路徑指向何處。
 
-  It's looking for a method called index on the jobs controller! Since there isn't a controller method for this route, we'll need to add it.
+  他在jobs controller尋找一個method叫index! 因為沒有一個controller method給這個路徑，所以我們需要添加它.
 
-  Open up your jobs controller (again, try to use keyboard shortcuts: cmd+p on Mac or ctl+p on PC to find the file at app/controllers/jobs_controller.rb).
+  打開你的job controller(使用快捷鍵cmd+p/t on Mac來尋找檔案app/controllers/jobs_controller.rb)。
 MARKDOWN
 
-source_code_with_message "Add the index method to the controller:", :ruby,
+source_code_with_message "在controller加入index method:", :ruby,
 <<-RUBY
 class JobsController < ApplicationController
   def index
@@ -93,28 +94,28 @@ class JobsController < ApplicationController
 end
 RUBY
 
-message "And refresh <http://localhost:3000/jobs>"
+message "重整 <http://localhost:3000/jobs>"
 
 error_box "JobsController#index is missing a template for this request format and variant."
 
 message <<-MARKDOWN
-  What's a template? How does Rails decide to look for the template associated with JobsController's `index` action?
+  什麼是樣板(template)? Rails是如何尋找到與 JobsController'的 `index` action相關的樣板?
 
-  Talk through what Rails is trying, and failing, to do, and how file names and method names are important here.
+  說說看Rails正在嘗試什麼、什麼失敗了、要做什麼，以及file names和method names是很重要的。
 
-  # Add a view
+  # 增加view
 
-  Within app/views/jobs, add a file called index.html.erb.
+  在app/view/jobs目錄下，新增一個檔案命名為 index.html.erb.
 
-  Save that file, and refresh <http://localhost:3000/jobs>
+  儲存檔案後重整 <http://localhost:3000/jobs>
 
-  NO ERROR!?!?! How boring. Let's add some content so we can be more confident that this really a thing.
+  沒有錯誤訊息!?!?! 真無聊。讓我們增加一些內容讓我們可以更加確信這真的是這麼一回事。
 MARKDOWN
 
-source_code_with_message "Within index.html.erb, add this (or the name of your fictional megacorp):", :html, "<h1>RailsBridgeCorp Open Jobs</h1>"
+source_code_with_message "在 index.html.erb, 添加 (或是你虛構出來的名稱 megacorp):", :html, "<h1>RailsBridgeCorp Open Jobs</h1>"
 
 message <<-MARKDOWN
-  DONE! Well, except that we don't have any jobs. And even though we could hand-code a table of job titles here, that would be awfully tedious and we'd probably get sick of adding job postings every time someone came up with a new volunteer position. Let's empower people to add their own postings!
+  D完成！但我們沒有任何jobs。儘管我們可以手刻一個job title的表單，那將是非常枯躁繁瑣的，我們可能會因為每次有人需要新志願者的職務就新增一個po文而生病。讓我們授權人們新增他們自己的po文吧!
 MARKDOWN
 
 next_step "store_jobs_in_the_database"
