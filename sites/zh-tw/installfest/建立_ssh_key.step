@@ -4,7 +4,7 @@ message "你需要用以下其中一個方式來開你的 Heroku 和 GitHub 帳�
 
 option "你是用 Windows 系統並用 RailsInstaller 安裝嗎？" do
   message "恭喜！你已經有 ssh key！"
-  link_without_toc 'create_a_heroku_account'
+  link_without_toc '建一個_heroku_帳號'
 end
 
 option "你已經有一個用在其他用途的 SSH key 了嗎？" do
@@ -16,7 +16,7 @@ option "你已經有一個用在其他用途的 SSH key 了嗎？" do
     message "前往 <a href='#generate-key'>建立一個 SSH key"
   end
   option_half "'/Users/[something]/.ssh/id_rsa'" do
-    link_without_toc 'create_a_heroku_account'
+    link_without_toc '建一個_heroku_帳號'
   end
 end
 
