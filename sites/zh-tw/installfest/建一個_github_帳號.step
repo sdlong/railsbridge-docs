@@ -21,7 +21,7 @@ end
 
 step "將你的 SSH key 放入到 Github 帳號裡" do
 
-  message "將 SSH key 放入到 Github 可以讓你 Pull(取的) 跟 Push(送出) 滋藥時，不需要輸入密碼。複製在前面步驟已經建立好的 **SSH Key** 並將它加入到 Github 裡即可。我們將會使用 Terminal(終端機) 的指令來完成，所以以下的指令不要多任何的空白或是空行，不然可能會出現錯誤"
+  message "將 SSH key 放入到 Github 可以讓你 Pull(取的) 跟 Push(送出) 資料時，不需要輸入密碼。複製在前面步驟已經建立好的 **SSH Key** 並將它加入到 Github 裡即可。我們將會使用 Terminal(終端機) 的指令來完成，所以以下的指令不要多任何的空白或是空行，不然可能會出現錯誤"
 
     h2 "如果你使用 Mac"
     console "pbcopy < ~/.ssh/id_rsa.pub"
@@ -75,5 +75,5 @@ step "確認 SSH key 的權限是否可以運作" do
 
   message "如果你看到的 username 是你在 Github 上建立的帳戶名稱，恭喜你已經在 Github 上完成 SSH 的設定"
 
-  next_step 'create_a_rails_app'
+  next_step '建一個_rails_應用程式'
 end
