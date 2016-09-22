@@ -61,7 +61,7 @@ explanation {
 
   * `app/views/topics`
     * 這個 View 資料夾包括了所有 topics 的前端視覺檔案。包括剛剛在建立資料時所用的表單。這些都由 Rails 的 Scaffold(鷹架) 自動建立出來的。
-    * 如果你寫過 HTML，有許多內容看起來會很熟雞。 Rails Views 其實就是在 HTML 裡嵌入物件(來自於 database 的資料)，來讓頁面可以在不同資料內容下動態顯示
+    * 如果你寫過 HTML，有許多內容看起來會很熟悉。 Rails Views 其實就是在 HTML 裡嵌入物件(來自於 database 的資料)，來讓頁面可以在不同資料內容下動態顯示
 
   * `app/views/topics/index.html.erb`
     * 此檔案是列出全部 topic 資料的頁面

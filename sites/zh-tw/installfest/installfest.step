@@ -10,7 +10,7 @@ step "準備開始 Installfest" do
 
 * **你的電腦** 可以跟 Wifi 連線，有網站瀏覽器並且有個可以收信的 Email
   * 如果你有 Mac 或是 Windows 可以選擇，請攜帶 Mac
-  * Lindex 是個可以接受的選擇，但是 Installfest 的教程只支援 Ubuntu 系統
+  * Linux 是個可以接受的選擇，但是 Installfest 的教程只支援 Ubuntu 系統
 * **你電腦的電源線**
 * 如果你已經註冊了 Heroku 跟 Github 帳號，請確保不要忘了帳號密碼
 

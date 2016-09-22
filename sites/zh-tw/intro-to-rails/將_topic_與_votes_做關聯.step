@@ -120,7 +120,7 @@ explanation {
 
 `has_many :votes` 後面接出來的 `dependent: :destroy` 很重要！
 代表該 **topic instance** 被刪除時，它所擁有的 **votes** 也會一併刪掉。
-如果沒有 `dependent :destroy` 這個設定，那些 votes 的資料將永遠存在資料庫裡面，
+如果沒有 `dependent: :destroy` 這個設定，那些 votes 的資料將永遠存在資料庫裡面，
 變成孤兒資料(因為找不到它所屬於的 topic)
   MARKDOWN
 }

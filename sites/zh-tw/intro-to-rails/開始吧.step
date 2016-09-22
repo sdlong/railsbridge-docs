@@ -57,7 +57,7 @@ steps do
 用你的程式編輯器來打開 suggestotron 的資料夾
   MARKDOWN
 
-  tip "將你目前程式編輯器上所有已開的檔案關掉，也許會有裝機趴上的 'test_app' ，我們要確保打開的是今天要做的 `suggestotron` 資料夾"
+  tip "將你目前程式編輯器上所有已開的檔案關掉，也許會有裝昨天的 'test_app' ，我們要確保打開的是今天要做的 `suggestotron` 資料夾"
 
   message <<-MARKDOWN
 在 **Sublime Text 2** ，你可以使用 `Project > Add Folder to Project...` 來打開(如下圖)
@@ -81,7 +81,7 @@ steps do
     }
     tr {
       td "app/"
-      td "專案最核心的部分，包括 Controllers, Models, Models 等資料夾，主要會在這裡做功能的開發"
+      td "專案最核心的部分，包括 controllers, models, views 等資料夾，主要會在這裡做功能的開發"
     }
     tr {
       td "config/"

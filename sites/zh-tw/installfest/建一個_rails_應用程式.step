@@ -8,7 +8,7 @@ step "切換到你的家目錄" do
   insert 'switch_to_home_directory'
 end
 
-step "Create a railsbridge directory" do
+step "開一個 railsbridge 資料夾" do
   console "mkdir railsbridge"
   message "`mkdir` 的意思是開新目錄（資料夾）"
   message "我們剛剛已經開了一個叫做 'railsbridge' 的資料夾"
@@ -58,7 +58,7 @@ step "開一個新的 Rails 應用程式" do
   img src: "img/successful_rails_install.png", alt: "Screenshot of the browser on localhost 3000 showing the rails intro page"
   message <<-MARKDOWN
 
-    * Back in the Terminal window where you ran <code>rails server</code>, type **Control-C** (don't type this into the console, but hold the Control and C keys at the same time) to kill(stop) the server. Windows will ask "Terminate batch job (Y/N)?".  Type "Y".
+    * 回到你跑 <code>rails server</code> 的終端機視窗，按下 **Control-C** (不是輸入這串到終端機，而是同時按下 Control 和 C 鍵) 來關掉 server。Windows 會問 "Terminate batch job (Y/N)?"，再選 "Y"。
   MARKDOWN
 
   important "在 Windows，有時候 Ctrl+C 不會動。這時候，請看鍵盤上的 'Break' 或 'Pause' 鍵，然後按下 Ctrl+Break ，在接下來的提問裡回答 Y 。如果鍵盤上沒有 Pause/Break 鍵，可以跑 ruby script/rails server 來代替 rails server ，這樣子應該就可以用 Ctrl-C 來關掉 server"
@@ -82,7 +82,7 @@ step "產生資料庫的 model" do
   message <<-MARKDOWN
     **註**： 以上是分別三個指令。請分別打進終端機裡面，不是一個指令。
 
-    請等到終端機顯示 Webrick server 已經啟動（跟之前一樣）。然後，在瀏覽器裡面，打開 <http://localhost:3000/drinks>
+    請等到終端機顯示 Puma server 已經啟動（跟之前一樣）。然後，在瀏覽器裡面，打開 <http://localhost:3000/drinks>
 
     1. 按一下 "New drink"
     2. 在 name 輸入 Cappuccino
@@ -91,7 +91,7 @@ step "產生資料庫的 model" do
 
     (你剛跑 `rails server` 的視窗會顯示做這件事時的除錯資訊)
 
-    You should see: ![Screenshot of the drink detail page](img/get_a_sticker_you_should_see.png)
+    你應該會看到: ![Screenshot of the drink detail page](img/get_a_sticker_you_should_see.png)
 
     然後在終端機裡面，按 Ctrl+C （Windows 也可以試 Ctrl+Break 再選 Y）來關掉 server
   MARKDOWN
