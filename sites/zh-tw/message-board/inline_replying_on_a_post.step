@@ -1,21 +1,24 @@
 requirements do
 message <<-MARKDOWN
-* The user should see the 'New Reply' form at the bottom of a Post's show page.
-* The user should be able to make replies using the inlined 'New Reply' form.
-* Error handling (trying to reply without any content) should still work the same way as when replying was a separate page.
+
+* 在文章個別頁面的底下，使用者應該能看到 「新增回覆（New Replay）」表單。
+
+* 藉由文章頁面下方的「新增回覆」表單，使用者可以建立回覆。
+
+* 跟上個章節：文章；新增回覆表單 兩者分開的時候一樣：回覆內容空白將會有錯誤訊息。
 MARKDOWN
 img class: 'noborder', src: 'img/inline_reply.png'
 end
 
 discussion do
 message <<-MARKDOWN
-* What needs to happen in the posts controller to allow inline replying? What needs to happen in the view?
+* 在 posts controller 要增加什麼東西，才能讓內連的回覆跟文章在同個頁面？在 view 的部分該做些什麼？
 MARKDOWN
 end
 
 tools_and_references do
 message <<-MARKDOWN
-* RailsGuides - Form Helpers, section 2.2: <http://guides.rubyonrails.org/form_helpers.html#binding-a-form-to-an-object>
+* RailsGuides - Action View 表單輔助方法： http://rails.ruby.tw/form_helpers.html#將表單綁定到物件
 MARKDOWN
 end
 

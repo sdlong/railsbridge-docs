@@ -1,8 +1,10 @@
 requirements do
 message <<-MARKDOWN
-* The user should be able to create a post with a title, author, date published, and content. The author should be the current user. 
-* The complete post should appear on its own page (aka its show page).
-* If the user doesn't submit all required fields, they should see some error messaging, but shouldn't lose any of their work.
+
+* 使用者可以建立一篇文章 -- 裡面包含標題（title），作者(author)，發佈日期(date published)跟 內容(content)。
+目前的使用者（current user）建立文章後，會是此篇文章的作者。
+* 完成的文章會有一個它自己的個別頁面。
+* 假如使用者沒有送出（submit）所有該填的表單，要顯示錯誤訊息；不過不要失去之前已經填好的欄位資料。
 MARKDOWN
   table do
     tr do
@@ -26,33 +28,44 @@ end
 
 discussion do
 message <<-MARKDOWN
-* How do you create a resource? What parameters do you need to pass?
-* Then: what did rails make for you when you used the resource generator? Find all the new files. Maybe even list them out on a whiteboard.
-* How do you associate a user with a post? 
-  * What did you have to put in the migration to create posts?
-  * How is this association communicated to the User and Post models?
-  * How will you associate the current user with a post when you create it? 
-* What's the difference between the `new` and `create` methods in the posts controller and how do these relate to the form to create a new post? 
+
+* 如何新增一個 resource？ 什麼樣的參數你可以跳過？
+* 然後：當你使用 resource generator 的時候，Rails 幫你製造了哪些檔案。找出所有新增的檔案；也許把它們都列出來。
+* 如何把使用者（user model）跟文章(post model)關聯在一起？
+  * 建立post model的時候，你應該要在 migration 檔案裡面增加什麼？
+  * User model 跟 Post model 如何關聯？
+  * 建立一篇新文章的時候，如何將「目前的使用者」跟「此篇文章」關聯在一起？
+* 在 posts controller 裡面的 `new`  `create` methods 之間有什麼區別？建立一篇新文章的時候，如何把 `new`  `create` methods 跟view 的表單結合在一起？
 MARKDOWN
 end
 
 tools_and_references do
 message <<-MARKDOWN
-* RailsGuides - Active Record Associations: <http://guides.rubyonrails.org/association_basics.html#the-belongs-to-association>.
-* RailsGuides - Form Helpers, section 2.2: <http://guides.rubyonrails.org/form_helpers.html#binding-a-form-to-an-object>.
-* RailsGuides - Routes - CRUD, Verbs, and Actions: <http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions>.
-* RailsGuides - Active Record Validations: <http://guides.rubyonrails.org/active_record_validations.html>.
-* RailsGuides - Active Record Callbacks: <http://guides.rubyonrails.org/active_record_callbacks.html>.
+* RailsGuides - Active Record 關聯： <http://rails.ruby.tw/association_basics.html#belongs-to-關聯>.
+
+* RailsGuides - Action View 表單輔助方法： <http://rails.ruby.tw/form_helpers.html#將表單綁定到物件>.
+
+* RailsGuides - Rails 路由：深入淺出 - CRUD、HTTP 動詞以及動作： <http://rails.ruby.tw/routing.html#crud、http-動詞以及動作>.
+
+* RailsGuides - Active Record 驗證 <http://rails.ruby.tw/active_record_validations.html>.
+
+* RailsGuides - Active Record 回呼 <http://rails.ruby.tw/active_record_callbacks.html>.
+
 MARKDOWN
 end
 
 hints do
 message <<-MARKDOWN
-* Rails has some built in ways to associate one model with another. See the RailsGuides link above for hints on how to make a user the owner of a post!
-* Don't hand code the form! You don't have to! Rails will help. See RailsGuide link above! 
-* Rails has a built-in way to note when something was stored in the database. Probably handy for showing the date / time a post was created.
-* For now, we're going to use the user's email address when displaying a post's author. You can add names or other identifiers later! (Also, even though you're going to get the current user's email address from the User model, you'll still need a user parameter for your Post resource.)
-* You need a `create` method to store your post data - scroll down a little bit in this section of the Getting Started guide for very helpful information and to see an example of a create method: <http://guides.rubyonrails.org/getting_started.html#creating-new-posts>.
+
+* Rails 有些內建的方式可以把兩個 model 關聯起來。上面的 RailsGuides 參考資料告訴你怎麼做！
+
+* 你不需要自己刻表單的程式碼！Rails 會幫助你完成。參考上面的 RailsGuides。
+
+* 當你把資料存到資料庫，Rails 有內建記錄功能，可以記錄當下的時間點。方便顯示文章被建立的日期／時間。
+
+* 目前我們用作者的 email 來代表某篇文章的作者，之後你可以改成作者的名字。
+
+* 你需要 `create` method 把文章存起來。Rails 起步走 下面有個 create method 的範例可供參考：<http://rails.ruby.tw/getting_started.html#新增文章>
 MARKDOWN
 end
 

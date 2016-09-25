@@ -1,42 +1,54 @@
 message <<-MARKDOWN
-## Assumptions made by this curriculum
-* You’ve gone through the standard RailsBridge installfest and have successfully completed the <a href="/installfest/get_a_sticker">Get a Sticker</a> step.
-* You’ve gone through the RailsBridge <a href="/intro-to-rails">Suggestotron curriculum</a> and the  <a href="/job-board">Job Board curriculum</a> at least once before, or maybe a couple of times, or maybe you feel decently comfortable with Rails for some other reason.
-* You want to learn more Rails!!!
+### 中文版
 
-## Goals
-* Make a thing!
-* Understand what the models, views, and controllers of a Rails app do and how they work together.
-* Get more comfortable using error messages as guideposts and not as scary things.
+## 假設你已經完成以下課程
 
-## What’s Going to Happen?
-* We’re going to build a message board system, where there are posts on the front page and you click through to see the original post plus discussion below.
-
-* We’ve divided this into challenges:
-  * Challenge 1: Create a new rails app with a static home page
-  * Challenge 2: Install Devise
-  * Challenge 3: Make it pretty with Bootstrap
-  * Challenge 4: Add pages to create and look at individual posts
-  * Challenge 5: Make a posts index page
-  * Challenge 6: Add replying
-  * Challenge 7: Inline replying on a post
-  * Challenge ∞: Other features of your choice
-
-* Each time you get your app into a functional state, before adding any more features, COMMIT TO GIT! The new features will probably break things, which is neat, but you’ll want to be able to roll back to a prior version if necessary.
-
-MAJORLY IMPORTANT NOTE: <b>We called the sections challenges because they are challenging!</b> This curriculum will be most fun as a collaboration — talk things through with your teacher, TAs, and other students. This is a very different style of curriculum than Suggestotron, so don’t be discouraged if you aren't quite sure what to do next.
-
-## How to use this curriculum
-* <b>Challenges</b> are the big chunks of stuff to work on at a given time. These are gated by requirements — once you (or your group) has completed a set of requirements, go on to the next set.
-
-* <b>Requirements</b> in this curriculum are not entirely divorced from what a requirement is in the agile software development methodology — things that should be in the application as defined by whoever is designing/deciding things about the product. Except here, we’ve also thrown in some non-application requirements, like the ability to explain a concept to a peer.
-
-* <b>Discussions</b> are led by the teacher; this is the closest this curriculum gets to lecture-y teaching.
-
-* <b>Hints</b> are what they sound like, as are <b>Tools & References</b>.
+* 完成了裝機趴Installfest，而且成功的 <a href="/installfest/get_a_sticker">拿貼紙</a>.
+* 完成了 <a href="/intro-to-rails">初探 Rails</a>
+還有<a href="/job-board">工作板課程</a> 至少一次
+* 想要學更多的 Rails
 
 
-* Teachers only!: there's a teaching guide at http://bit.ly/int-railsbridge-guide
+## 目標
+
+* 做一個可以動的玩意兒出來！
+* 搞懂Rails專案裡面的 models , views , controllers 在做什麼、如何搭配在一起產生作用。
+* 把錯誤訊息當成引導你的一盞明燈，不再恐懼。
+
+
+## 練功目標
+
+* 我們將會打造一個可以show出許多文章的信息展示板。透過點擊，你可以看到原來的文章、還有附加在下方的討論區域。
+
+
+* 我們把目標拆開成以下幾個部分
+
+  * 挑戰 1: 新增一個rails專案，拿來當做靜態網頁
+  * 挑戰 2: 安裝 Devise
+  * 挑戰 3: 使用 Bootstrap 把網頁變漂亮
+  * 挑戰 4: 增加一些頁面，每一個頁面有個別的文章
+  * 挑戰 5: 做一個索引頁面（index page）
+  * 挑戰 6: 增加回應討論
+  * 挑戰 7: 文章頁面內的回應討論
+  * 挑戰 8: 你選擇的其他功能
+
+
+* 當你每次寫好了一個有作用的功能，準備繼續增加其他功能之前，記得COMMIT 到 git 上！新的功能可能會發生錯誤，這樣你就可以回復到上一個沒有出錯的記錄點。
+
+
+重要提醒：<b>這個專案有點大，所以我們把拆好的８個段落稱之為一個個挑戰（Challenge）</b>
+此課程透過跟老師朋友同學之間的合作，將會變得更有趣！
+這個課程會比「初探 Rails」困難一些，當你不確定下一步要做什麼的時候不用太沮喪，快去google 或問朋友吧～
+
+## 如何使用本課程
+
+* <b>挑戰</b> 是個大目標，一開始請務必把「繼續往下走的話你需要」完成，再接下去。
+* <b>需要</b> 的東西，不光是一些敏捷的軟體開發方法；除此之外，跟你的同伴解釋一個你會的觀念，也是必要的能力。
+* <b>討論</b> 由老師主導; 每條討論，都是本課程的核心所在。
+* <b>秘訣</b> 裡面說的，就去 <b>工具、參考資料</b> 那邊找吧~
+
+
+* 教學區 : 教學引導 http://bit.ly/int-railsbridge-guide
 MARKDOWN
 
 next_step "create_a_new_rails_app_with_a_static_home_page"

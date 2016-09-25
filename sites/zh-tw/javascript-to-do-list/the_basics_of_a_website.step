@@ -27,18 +27,21 @@ steps do
   step do
     message <<MARKDOWN
 First thing's first: we'll be modifying our HTML. Open up index.html in your text editor. You should see something like this:
-
+首先：我們要調整一下我們的 HTML。用文字編輯器打開 index.html 。你會看到像是下面的東西：
 <img src='img/text_editor_html.png' alt="image of an html page open in a text editor">
 
 Take a look around. What are the different elements doing? Why are some lines indented deeper
 than others? What are those strange series of numbers and ampersands?
+看一下，不同的元素有什麼樣的作用？為什麼有些行的程式碼縮排得比較多？那些奇怪的號碼跟 \&記號 是做什麼用的？
+
 
 Finally, you should find this line of code in index.html:
+最後，你應該可以在 index.html 找到這一行：
 MARKDOWN
       source_code :html, <<-HTML
         <h1>Your List App</h1>
       HTML
-    message "and change the text whatever you want your list application to be called. Save your file. Go back to chrome and refresh the page. Your list application should have changed!"
+    message "你想叫這個代辦清單應用程式什麼？把 h1 裡的文字改成你想要的。存檔，然後把瀏覽器重新整理。"
   end
 
   step do

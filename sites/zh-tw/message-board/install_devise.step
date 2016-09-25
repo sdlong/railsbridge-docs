@@ -1,44 +1,57 @@
 requirements do
 message <<-MARKDOWN
-* The user should be able to create an account and log in.
-* The user should see a prompt to log in if they aren't logged in.
-* Once logged in, the user should see a static page with some kind of greeting.
-* The page should display the logged-in user's email address and a link to log out.
+
+* 使用者可以建立帳號並且登入。
+
+* 如果使用者沒有登入，會看到「需要登入」的提示。
+
+* 當使用者登入之後，應該看到一些類似歡迎的提示。
+
+* 此頁面應該顯示出登入者的 email，而且有個登出的連結。
 MARKDOWN
 end
 
 important do
-  h2 "Timebox It!"
-  p "The purpose of this section is to allow users to log in to your app and demonstrate how to add external libraries like Devise using the Gemfile. If you find yourself needing to write more than a couple of lines of code to make that happen, you may have gone too far. Talk to a TA!"
+
+h2 "時間箱的限制！"
+p "這章節的目的：讓使用者能登入這個專案，並示範如何透過 Gemfile 增加像是「Devise」這樣的外部資料庫。
+假使你需要寫超過2行程式碼，你應該走錯方向了！"
+
 end
 
 discussion do
 message <<-MARKDOWN
-* What is Devise?
-* What files did Devise add to your rails app?
-* Someone Who Knows: explain how to read the output of the command `rake routes`. What does it give you? How is it helpful?
-* How will you add the log out link? What's the syntax for a DELETE action?
-* You're going to be editing your application layout to add error messaging. If you haven't already, discuss the relationship between the application layout and all the other views you'll be creating. 
+
+* 什麼是 Devise ?
+* Devise 增加了哪些檔案到你的 rails 專案？
+* 已經懂的朋友：解釋怎麼看懂 `rake routes` 指令輸出的東西。它提供你什麼？為什麼它有幫助？
+* 要怎麼做出「登出」連結？ DELETE action 的語法是什麼？
+* 為了顯示錯誤訊息，你打算編輯 application layout 。如果還沒想到，討論一下 application layout 跟你建立的 view 之間的關係。
 MARKDOWN
 end
 
 tools_and_references do
 message <<-MARKDOWN
-* Devise: authentication magic! Learn more about it here: https://github.com/plataformatec/devise
- * In the readme, scroll down to "Getting Started." You'll need to add it to your gem file. If you don't remember how, ask your neighbor! 
- * You probably don't want to just start typing commands from the Devise readme. You probably want to read through that whole section first. (i.e., don't skip bundle!)
+
+
+* Devise：魔幻般的登入系統！ https://github.com/plataformatec/devise
+ * 在 readme 裡面，往下可以看到 "Getting Started." 你需要把它增加到 gem file。若是忘記怎麼做，問一下鄰居！
+ * 你也許不想馬上照著 readme 裡面所有的指令去做，而是先瀏覽過整個段落（但是別跳過 bundle）
 MARKDOWN
 end
 
 hints do
 message <<-MARKDOWN
-* Readme files are your best friends! Love them!
-* The convention for naming models is to capitalize the first letter, like: User. 
-* When you run `rails generate devise:install`, you get five instructions for things to configure. 3 & 4 are good to do.
-* The routes file goes through many common types of routes in the comments. This is also your friend.
-* Devise has some magic that will help you with your logout link. Run `rake routes` and look for a route that helps you sign out. 
-* You'll probably want to show the current user's email address only if they are presently signed in, right? Devise has a helper for you.
-* Optional: any time you generate a model in rails, you can use Rails Console to look at that model's methods and behavior interactively.
+
+* Readme 檔案是你最好的朋友！
+* 命名 models 的慣例：第一個字母要大寫，例如：User
+
+* 當你下 `rails generate devise:install` 指令以後，有五個配置的指示，第三跟第四個可以做看看。
+
+* routes file 也是你的好朋友。
+* Devise 有些神奇魔法，可以幫助你做出「登出」連結。執行 `rake routes` 然後看看 sign out 的部份。
+* 當使用者登入的時候，你也許想要顯示出他們的 email 。Devise 可以幫你一把。
+* 選擇題：當你建立一個 model 的時候，可以使用 Rails Console 去測試一些交互作用。
 MARKDOWN
 end
 

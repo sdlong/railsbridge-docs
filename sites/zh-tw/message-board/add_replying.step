@@ -1,9 +1,13 @@
 requirements do
 message <<-MARKDOWN
-* The user should see a 'New Reply' link or button on a post's show page which takes them to a form. The form should include the title of the post being replied to.
-* The user should be able to create a new reply to a post using the 'New Reply' form.
-* The user should see all the replies to a post on the post’s show page.
-* If the user doesn't submit all required fields, they should see some error messaging, but they shouldn't lose any of their work.
+
+* 使用者能在文章的個別頁面（show page）看到「新增回覆（New Reply）」按鈕，點擊之後會帶領使用者到一個表單（此表單顯示文章的標題）。
+
+* 使用者填好回覆訊息後，點擊「確定回覆（Reply）」可以建立一個新的回覆訊息。
+
+* 使用者能在文章的個別頁面（show page）看到所有針對此文章的回覆訊息。
+
+* 如果欄位留白，使用者會看到一些錯誤訊息提醒他們。
 MARKDOWN
   table do
     tr do
@@ -27,15 +31,18 @@ end
 
 discussion do
 message <<-MARKDOWN
-* What is a nested resource? When is it appropriate and how does it help?
-* How do the `RepliesController` and `PostsController` interact?
-* What should happen to the routes file for this nesting business to work?
+
+* 什麼是嵌套資源（nested resource）？ 什麼時候用它適當？它有什麼幫助？
+* `RepliesController` 跟 `PostsController` 如何互相作用？
+
+* 在 routes 檔案裡該怎麼寫出嵌套資源？
 MARKDOWN
 end
 
 tools_and_references do
 message <<-MARKDOWN
-* RailsGuides - Rails Routing from the Outside In http://guides.rubyonrails.org/routing.html
+
+* RailsGuides - Rails 路由：深入淺出 http://rails.ruby.tw/routing.html
 MARKDOWN
 end
 
