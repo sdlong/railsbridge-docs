@@ -1,41 +1,38 @@
 goals do
-  goal "Add some starter files"
+  goal "加入些起始用的檔案"
 end
 
 steps do
   step do
     message <<-MARKDOWN
-      Download the .zip file from <a href="front-end-lesson.zip">this link</a>
-      When the file download finishes, find it on your computer and unzip it.
+      從<a href="front-end-lesson.zip">這裡</a>下載 .zip 檔。
+      下載完後，在你的電腦裡找到它並開啟。
     MARKDOWN
   end
-  
+
   step do
     message <<-MARKDOWN
-      The zip file should contain a file called index.html and a directory of resources.
+      這份 zip 檔會包含一個叫 index.html 的檔案及 resources 資料夾。
 
       <img src='img/zip.png'>
 
-      Drag the file called index.html and resources folder into your project folder. Go ahead and replace the index.html file you may already have in there.
-    MARKDOWN
+      將 index.html 檔及 resources 資料夾拖到你的專案目錄內。若你專案裡已經有 index.html，請把下載來的 index.html 蓋掉原本的。
+      MARKDOWN
   end
 end
 
 explanation do
   message <<-MARKDOWN
 
-## What Are These Files?
+## 這些檔案是什麼？
 
-Just to save you some time, we've supplied a bare bones HTML document, a CSS stylesheet,
-a JavaScript file, and a placeholder image.
+為了幫你節省時間，我們提供了具有基本骨架的 HTML 文件、CSS 樣式表、JavaScript 檔案及預留位置用的圖。
 
-If you are starting a new project in the future, try typing it all out by hand a few times
-to get the hang of it, and then try starting with some other people's HTML boilerplate code
-that they've shared:
+如果你正在建立未來要用的專案，試著一個字一個字把教材打出來，並重複練習幾次，這樣才能熟練，接下來試著用其他人分享的 HTML 樣板開始開發專案：
 
-* [HTML5 Boilerplate](http://html5boilerplate.com/), a blank template with lots of tips for high-performance best practices.
-* [Bootstrap](http://getbootstrap.com/), an HTML / CSS / JS base with a big library of styles to test out.
-* [Foundation](http://foundation.zurb.com/), another HTML / CSS / JS framework you can test out.
+* [HTML5 Boilerplate](http://html5boilerplate.com/)：一個擁有許多高效典範實務提示的空白模板。
+* [Bootstrap](http://getbootstrap.com/)：一個擁有超大樣式函式庫，且可以讓你拿來套用的 HTML / CSS / JS 基底。
+* [Foundation](http://foundation.zurb.com/)：另一個可以讓你拿來套用的 HTML / CSS / JS 框架。
 
   MARKDOWN
 end

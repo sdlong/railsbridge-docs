@@ -1,15 +1,12 @@
-# Working Effectively and Efficiently
+# 有效且高效的工作
 
-We highly recommend you do the following:
+強烈建議你這樣做：
 
-* Open your browser fresh or hide any windows you already have open.
-  * Bring up one window with two tabs.
-    * One for this content.
-    * One for interacting with your app.
-* Open your text editor and don't close it.
-* Hide all extra applications. Turn off Twitter, Facebook, IM, and all other distractions.
+* 開一個全新的瀏覽器或關掉其它你之前打開的視窗。
+  * 在一個視窗裡開兩個頁籤。
+  * 一個用來看本頁內容。
+  * 一個用來跟你的應用程式互動。
+* 開啟你的文字編輯器並不要關閉它。
+* 把其他應用程式都隱藏起來。關掉 Twitter 、即時通訊程式、別的干擾物。
 
-By minimizing the number of things you interact with, you reduce the
-amount of time spent switching between them and the context lost as
-you work through the lessons. Having 50 tabs open in your web
-browser gets confusing.
+把跟你互動的東西最少化，可以減少你切換視窗及分心後回神需要的時間。瀏覽器同時開 50 個頁籤容易讓人頭昏。

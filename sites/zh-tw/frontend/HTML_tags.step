@@ -1,53 +1,48 @@
 goals do
-  goal "Add some tags to your HTML file"
-  goal "Learn more about available tags"
+  goal "在你的 HTML 檔案加上一些標籤"
+  goal "學會更多可用的標籤"
 end
 
 overview do
 
   message <<-MARKDOWN
 
-## Use Tags to Separate Blocks of Content
+## 用標籤將內容分割成塊
 
 
-Tags convey meaning. And in order to display your content well, everything should be inside of a tag, not just words you want emphasized. So let's use the paragraph tag `<p>` and the header 1 tag `<h1>`.
+每個標籤都帶有它的意義。為了將你的內容適當地表現出來，每個東西都應該放到標籤內，而不是只有你想要強調的部份。我們來用用看段落標籤 `<p>` 及 1 號頭標籤 `<h1>` 吧。
 
-You'll notice that even if you put in extra lines and spaces, browsers will treat any number of
-new line or space characters like there's just one space there. When you're getting started
-with HTML, this can seem like a pain, because you have to type
+你會注意到就算你加入額外的換行符號及空白，瀏覽器還是會將它們視為單一個空白。當你開始熟悉 HTML 時，這可能會感到痛苦，因為你必須輸入
   MARKDOWN
 
   source_code :html, <<HTML
-<p>first sentence</p>
-<p>second sentence</p>
+<p>第一句</p>
+<p>第二句</p>
 HTML
   message <<-MARKDOWN
 
-when all you want is a blank line between two sentences. But as you get more advanced, this
-aspect of HTML will feel more useful, because it means you can format your code however is
-most readable for **you**, without worrying about what the browser will think of your blank
-lines and spaces.
+才能在兩句話之間加上一個空白。但隨著你經驗的累積，你會覺得 HTML 這項特性其實是很有用的，因為這表示你可以把程式碼改成**你**讀起來最舒服的格式，且不用管瀏覽器怎麼看待你的換行符號及空白。
 
-## Nested Tags
+## 巢狀標籤
 
-It's common for an HTML tag to be nested inside another tag. In the example above, you saw:
+HTML 標籤被嵌套在另一種標籤內是很常見的。在上面的例子中，你看到：
   MARKDOWN
 
   source_code :html, "<h1><em></em></h1>"
 
   important do
-    message "Just make sure that the tags are correctly _nested_. For example, you can't do:"
+    message "記得確認標籤都有正確的_嵌套_ 。例如你不能這樣寫："
 
     source_code :html, "<h1><em>Hello World!</h1> I like you!</em>"
 
-    message "The inner tag, `em`, needs to close before the outer tag closes."
+    message "內部標籤 `em` 必須比外部標籤提早結束。"
   end
 end
 
 steps do
 
   step do
-    message "Add some more lines of content to your HTML file. Introduce yourself."
+    message "在你的 HTML 檔案多加幾行內容，並介紹你自己。"
 
     source_code :html, <<-HTML
 Hello <em>World</em>!
@@ -55,25 +50,25 @@ Hello <em>World</em>!
 My name is Rachel.
     HTML
 
-    message "Now save the file and refresh your browser."
+    message "把檔案存下來，然後重新整理瀏覽器。"
     img src: 'img/hello_world_2line.png'
   end
 
   step do
-    message "The browser ignored the new lines and the blank line because we didn't use any tags. Let's use some to break up our content."
-    message "Update your HTML with an `h1` tag and a `p` tag:"
+    message "由於我們沒有用任何標籤，所以瀏覽器會忽略換行符號及空白的行。我們用一些標籤來分割文字內容吧。"
+    message "用 `h1` 及 `p` 標籤來更新你的 HTML："
 
     source_code :html, <<-HTML
 <h1>Hello <em>World</em>!</h1>
 <p>My name is Rachel.</p>
     HTML
 
-    message "Now save the file and refresh your browser."
+    message "把檔案存下來，並重新整理你的瀏覽器。"
     img src: 'img/hello_world_2line2.png'
   end
 
   step do
-    message "Now let's add a list of things we like."
+    message "現在加一串我們喜歡的東西吧。"
 
     source_code :html, <<-HTML
 <h1>Hello <em>World</em>!</h1>
@@ -86,7 +81,7 @@ My name is Rachel.
 </ul>
     HTML
 
-    message "Now save the file and refresh your browser."
+    message "把檔案存下來，並重新整理你的瀏覽器。"
     img src: 'img/html_tags_list.png'
   end
 
@@ -97,119 +92,115 @@ explanation do
 
   message <<-MARKDOWN
 
-## Tags for Every Occasion
+## 每個場合都有各自的標籤
 
-The meteoric rise in popularity of the world-wide-web and the recent proliferation of web
-applications has made HTML hugely popular.  While originally used only for simple documents,
-HTML now has tags for embedded video and music playback, embedding images, filling out
-web forms, and all kinds of other useful tags.
+World-wide-web 的竄紅及近年來網路應用程式的普及已使得 HTML 大受歡迎。原本 HTML 只是為簡單的文件而設計的，但現在 HTML 有內嵌影片、音樂播放、內嵌圖片、填寫表單等各種有用的標籤。
 
-You just used two well-known tags, `h1` for a headline and `p` for a paragraph. But there
-are a ton of other tags you might use:
+你剛剛只用到兩個很常見的標籤，分別是代表標題的 `h1` 及 代表段落的 `p`。還有其它許多標籤也是你可能會用到的：
 
-## More Tags
+## 更多標籤
 
   MARKDOWN
 
   table border: "1", cellspacing: "0", cellpadding: "3", align: "center" do
     tr {
-      th "Tag"
-      th "Purpose"
+      th "標籤"
+      th "用意"
     }
     tr {
       td "a"
-      td "A link (the 'a' stands for Anchor)."
+      td "連結（a 表示 Anchor（錨））"
     }
     tr {
       td "h1 to h6"
-      td "Various headers, h1 is the most important, h6 the least."
+      td "各種標頭，h1 是最大的，h6 則是最小的。"
     }
     tr {
       td "ul"
-      td "Start a bulleted list (an 'unordered list')."
+      td "建立一組項目符號（代表 unordered list 兩個詞的第一個字母）。"
     }
     tr {
       td "ol"
-      td "Start a numbered list (an 'ordered list')."
+      td "建立一組編號清單（代表 ordered list 兩個詞的第一個字母）。"
     }
     tr {
       td "li"
-      td "A single thing within a list (a 'list item')."
+      td "清單內的一個東西（代表 list item 兩個詞的第一個字母）。"
     }
     tr {
       td "table, tr, td"
-      td "Tables (like this one) with table rows and data cells."
+      td "帶有資料格（data cell）及橫列（row）的表單（例如目前這個表單）。"
     }
     tr {
       td "form"
-      td "A form that can collect data from user input."
+      td "讓使用者輸入資料的表格。"
     }
     tr {
       td "input"
-      td "A text input, a button, or a checkbox in a form."
+      td "form 裡面的文字輸入欄、按鈕或是勾選框。"
     }
     tr {
       td "div"
-      td "A section marker that doesn't do anything specific to the contents itself, but does make a new line after. (a 'division'. More on this later)"
+      td "跟內容本身無關的區段標記，這個標籤結束後會自動產生換行符號（代表 division，後續會提到更多相關資料）。"
     }
     tr {
       td "span"
-      td "Another section marker that doesn't do anything to its contents, but is inline - it does not make a new line after."
+      td "另一個跟內容本身無關的區段標記，這個標籤結束後不會產生換行符號。"
     }
   end
 
   message <<-MARKDOWN
 
-  HTML5 introduced lots of new tags to make the HTML more *semantic*, meaning the tags should describe the content they describe. Some of the new elements introduced by HTML5 include:
+  HTML5 導入許多新的標籤來讓 HTML 更具*語義* ，這表示標籤應該要描述它們本來要描述的內容。部份 HTML5 導入的新標籤包含：
 
   MARKDOWN
 
   table border: "1", cellspacing: "0", cellpadding: "3", align: "center" do
     tr {
-      th "Tag"
-      th "Purpose"
+      th "標籤"
+      th "用意"
     }
     tr {
       td "section"
-      td "A section of a document: a thematic grouping of content."
+      td "文件的一個區段：有特定主題的內容。"
     }
     tr {
       td "nav"
-      td "A navigation section, containing links to other pages or to parts within the current page."
+      td "導覽區段，包含指向其它頁面或本頁其它部份的連結。"
     }
     tr {
       td "header"
-      td "The header for a page or section of a page. (This is different from the head element, which contains metadata about the page!)."
+      td "頁面的標頭或區段。（這跟 head 元件不同，head 還包含頁面的中繼資料！）。"
     }
     tr {
       td "footer"
-      td "The footer for a page or section of a page."
+      td "頁面的頁尾或區段。"
     }
     tr {
       td "main"
-      td "The main content of a page."
+      td "一個頁面的主要內容。"
     }
     tr{
       td "aside"
-      td "Content that's related to the main content, but could be considered separate from it."
+      td "跟主要內容相關的內容，但兩者可視為分開的。"
     }
   end
 
   message <<-MARKDOWN
 
-You don't need to memorize all the tags! You can always look them up on sites like:
+你不必把全部標籤背下來，需要用的時候再到類似下面的網站查就可以：
 
 * [WebPlatform.org](http://webplatform.org/)
 * [Mozilla Developer Network](https://developer.mozilla.org/en/HTML/Element)
 * [Sitepoint](http://reference.sitepoint.com/html)
 
-## Try This
+## 試試看
 
-What happens if you change the `<ul>` in your **hello.html** to `<ol>`? (Don't forget to change the closing tag, too.)
+如果你把 **hello.html** 內的 `<ul>` 換成 `<ol>` 會發生什麼事呢？（別忘了結尾標籤也要跟著改。）
 
-Can you link your favorite things to their Wikipedia pages? Here's an example link for you: `<a href="http://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a>`
+你有辦法把你最喜歡的東西連結到它們的維基百科頁面嗎？這裡有個連結範例：`<a href="http://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a>`
 
-What are all the individual parts of the code to add a link?
+想想看，添加連結的程式碼每個部份分別是什麼？
 
   MARKDOWN
 

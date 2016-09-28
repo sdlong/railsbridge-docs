@@ -1,46 +1,45 @@
 goals do
-  goal "Add standard HTML head and body tags"
-  goal "Add a page title"
-  goal "Understand the use of non-visible tags like head"
+  goal "加入標準 HTML 的 head 與 body 標籤"
+  goal "加上頁面的標題"
+  goal "理解像是 head 這類看不見的標籤的用途"
 end
 
 overview do
 
   message <<-MARKDOWN
 
-## The HTML tag and DOCTYPE
+## HTML 標籤 及 DOCTYPE
 
-`<!DOCTYPE html>` is called the doctype, and it tells the browser which flavor of HTML you're using. `<!DOCTYPE html>` tells your browser you're using HTML5, the latest version of HTML.
+`<!DOCTYPE html>` 被稱為 doctype，它告訴瀏覽器你正在用哪種 HTML。
+`<!DOCTYPE html>` 會通知瀏覽器你正在用最新版的 HTML5。
 
-(You may see older doctypes out there that are longer and a lot more complicated, from when people
-used various HTML and XHTML versions. You can usually just
-use this short version for new websites.)
+（你可能會看到舊式的 doctype，它們看起來比較長且複雜許多，這是因為當時人們用了各種版本的 HTML 及 XHTML 。通常新網站用這個簡短版本就行了）
 
-The `<html>` encloses all the rest of your page and states "Here is my HTML!"
+`<html>` 標籤會包住你的頁面並表明「這是我的 HTML！」
 
-## Pages, Like People, Have a Head and a Body
+## 頁面就像人一樣有頭（head）及身體（body）
 
   MARKDOWN
   source_code :html, <<HTML
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Important invisible details will go here! -->
+    <!-- 重要的不可見細節資訊會放這裡！ -->
   </head>
   <body>
-    Visible Content
+    可見內容
   </body>
 </html>
 HTML
   message <<-MARKDOWN
 
-### The Head
+### 頭（head）
 
-The `head` contains information that is not displayed in your browser. It has metadata (data about data) tags that can tell a search engine or another program more about the file, like who wrote it or what keywords are relevant, such as:
+`head` 包含你瀏覽器不會顯示的資訊。它有中繼資料（有關資料的資料）的標籤，可以告訴搜尋引擎或其它程式更多關於這份檔案的資訊，例如誰建立這個檔案或是哪些關鍵字跟這個檔案有關，像是：
 
- * What language or character set you're using: `<meta charset="utf-8">`
- * What the page title should be: `<title>HTML!</title>`
- * What CSS and JavaScript files to include (and where they are): `<link rel="stylesheet" href="style.css">`
+ * 你用哪種語言或字元集：`<meta charset="utf-8">`
+ * 這個頁面的標題是什麼: `<title>HTML!</title>`
+ * 應該包含哪些 CSS 及 JavaScript 檔案（以及它們的位置）：`<link rel="stylesheet" href="style.css">`
 
   MARKDOWN
   source_code :html, <<HTML
@@ -59,10 +58,9 @@ HTML
   message <<-MARKDOWN
 
 
-### The Body
+### 身體（body）
 
-The body contains the actual content of your file, the things you'll want your users
-to be able to see, read, or interact with!
+body 包含你檔案的內容或是你希望使用者看得到、能互動的東西。
 
   MARKDOWN
 
@@ -72,24 +70,24 @@ steps do
 
   step do
     message <<-MARKDOWN
-Let's add the doctype, HTML, head, and body tags to your hello.html file. It should look something like this:
+在你的 hello.html 檔案加入 doctype、HTML、head 及 body 吧。加好後看起來應該像這樣：
 
 <img src='img/hello_structure.png'>
 
-Save the file and refresh your browser. Everything should look mostly the same.
+存檔並重新整理你的瀏覽器，做完後畫面看起來應該差不多。
 
     MARKDOWN
   end
 
   step do
-    message "Let's add a title to our page within the `<head>` section. Add this line:"
+    message "我們在 `<head>` 區段內加入標題吧。加入這行："
     source_code :html, "<title>My Sample HTML page</title>"
     message <<-MARKDOWN
-When you refresh your browser, you should see the title on the tab in Chrome.
+當你重新整理瀏覽器後，你應該會在 Chrome 的頁籤上看到標題。
 
 <img src='img/hello_title.png'>
 
-(If it doesn't show up, double check that you put the line between the opening and closing head tags, and that you saved your file before refreshing.)
+（如果它沒有顯示出來，確認一下你是否有把這段字加到開頭及結尾的 head 標籤當中，並確認你在重新整理前有存檔。）
     MARKDOWN
   end
 
